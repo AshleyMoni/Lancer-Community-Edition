@@ -1,0 +1,95 @@
+\usepackage{enumerate}
+\usepackage{pgfkeys}
+
+\newcommand{\fluff}[1]{{\itshape #1}}
+
+\providecommand\corpName{}
+\providecommand\mechName{}
+\newenvironment{mech}[2]
+{
+  \renewcommand{\corpName}{#1}
+  \renewcommand{\mechName}{#2}
+  \corpName \space \mechName \\
+}
+{}
+
+\newenvironment{license}
+{
+License: \\
+\begin{enumerate}[I]
+}
+{
+\end{enumerate}
+}
+
+\pgfkeys{
+  % we define a family, and enter it
+  /frame/.is family, /frame,
+  % we define some defaults
+  default/.style =
+  {
+    hp = undefined,
+    evasion = undefined,
+    speed = undefined,
+    heat cap = undefined,
+    sensors = undefined,
+    armor = undefined,
+    e-defense = undefined,
+    size = undefined,
+    repair cap = undefined,
+    tech attack = undefined,
+    sp = undefined,
+    traits = undefined,
+    mount one = -,
+    mount two = -,
+    mount three = -,
+    core system name = undefined,
+    core system text = undefined,
+    core active name = undefined,
+    core active text = undefined,
+  },
+  % we define some keys
+  hp/.estore in = \frameHP,
+  evasion/.estore in = \frameEvasion,
+  speed/.estore in = \frameSpeed,
+  heat cap/.estore in = \frameHeatCap,
+  sensors/.estore in = \frameSensors,
+  armor/.estore in = \frameArmor,
+  e-defense/.estore in = \frameEDefense,
+  size/.estore in = \frameSize,
+  repair cap/.estore in = \frameRepairCap,
+  tech attack/.estore in = \frameTechAttack,
+  sp/.estore in = \frameSP,
+  traits/.estore in = \frameTraits,
+  mount one/.estore in = \frameMountOne,
+  mount two/.estore in = \frameMountTwo,
+  mount three/.estore in = \frameMountThree,
+  core system name/.estore in = \frameCoreSystemName,
+  core system text/.estore in = \frameCoreSystemText,
+  core active name/.estore in = \frameCoreActiveName,
+  core active text/.estore in = \frameCoreActiveText,
+}
+
+\newcommand\frameBox[1][] {
+  \pgfkeys{/frame, default, #1}
+  \mechName \\
+  HP: \frameHP \\
+  Evasion: \frameEvasion \\
+  Speed: \frameSpeed \\
+  Heat Cap: \frameHeatCap \\
+  Sensors: \frameSensors \\
+  Armor: \frameArmor \\
+  E-Defense: \frameEDefense \\
+  Size: \frameSize \\
+  Repair Cap: \frameRepairCap \\
+  Tech Attack: \frameTechAttack \\
+  System Points: \frameSP \\
+  Traits: \frameTraits \\
+  Mount 1: \frameMountOne \\
+  Mount 2: \frameMountTwo \\
+  Mount 3: \frameMountThree \\
+  \textbf{\frameCoreSystemName} \\
+  \frameCoreSystemText \\
+  \textbf{\frameCoreActiveName} \\
+  \frameCoreActiveText \\
+}
