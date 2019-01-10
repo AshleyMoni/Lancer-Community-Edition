@@ -15,15 +15,18 @@
 \raggedright
 \usepackage{fontspec}
 \setmainfont{Arial}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+\import{./templates/}{mech.tex}
+
+% Hyperref should always be IMPORTED LAST
 \usepackage[hidelinks]{hyperref}
 \hypersetup{
     colorlinks,
     allcolors=black
 }
-\usepackage{graphicx}
-\graphicspath{ {./images/} }
-
-\import{./templates/}{mech.tex}
+\import{./templates/}{gear.tex}
 
 \begin{document}
 \import{./source/}{changelog}
