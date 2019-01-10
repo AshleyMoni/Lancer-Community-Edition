@@ -1,7 +1,7 @@
 \usepackage{enumerate}
 \usepackage{pgfkeys}
 
-\newcommand{\fluff}[1]{{\itshape #1}}
+\providecommand{\fluff}[1]{{\itshape #1}}
 
 \providecommand\corpName{}
 \providecommand\mechName{}
@@ -22,7 +22,7 @@ License: \\
 \end{enumerate}
 }
 
-\pgfkeys{
+\pgfkeys {
   % we define a family, and enter it
   /frame/.is family, /frame,
   % we define some defaults

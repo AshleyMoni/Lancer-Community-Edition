@@ -1,64 +1,88 @@
 % Weapon Tags
-\newcommand{\Pilot}{\hyperlink{Pilot}{Pilot}}
-\newcommand{\Auxiliary}{\hyperlink{Auxiliary}{Auxiliary}}
-\newcommand{Main}
-\newcommand{Heavy}
-\newcommand{Superheavy}
-\newcommand{CQB}
-\newcommand{Rifle}
-\newcommand{Launcher}
-\newcommand{Cannon}
-\newcommand{Melee}
-\newcommand{Nexus}
-\newcommand{Explosive}
-\newcommand{Kinetic}
-\newcommand{Energy}
-\newcommand{HeatTarget}
-\newcommand{HeatSelf}
-\newcommand{Blast}[1]
-\newcommand{Burst}[1]
-\newcommand{Cone}
-\newcommand{Line}
-\newcommand{AP}
-\newcommand{Accurate}
-\newcommand{Arcing}
-\newcommand{Burn}
-\newcommand{Inaccurate}
-\newcommand{Knockback}
-\newcommand{Loading}
-\newcommand{Reliable}
-\newcommand{Overcharged}
-\newcommand{Ordnance}
-\newcommand{Seeking}
-\newcommand{Smart}
-\newcommand{Threat[1]}
-\newcommand{Thrown[1]}
-\newcommand{Clothing}
-\newcommand{Armor}
-\newcommand{Gear}
-\newcommand{Upgrade}
-\newcommand{Sidearm}
-\newcommand{Rarity}[1]
-\newcommand{QuickAction}
-\newcommand{FullAction}
-\newcommand{Ammo}
-\newcommand{DangerZone}
-\newcommand{Deployable}
-\newcommand{Drone}
-\newcommand{Grenade}
-\newcommand{Limited}[1]
-\newcommand{Mine}
-\newcommand{Mod}
-\newcommand{Protocol}
-\newcommand{Reaction}
-\newcommand{Resistance}
-\newcommand{Shield}
-\newcommand{Unique}
-\newcommand{EndOfTurn}
-\newcommand{BonusDamage}
-\newcommand{CriticalHit}
-\newcommand{Deployable}
-\newcommand{Mod}
-\newcommand{AI}
+\usepackage{pgfkeys}
 
+\providecommand{\fluff}[1]{{\itshape #1}}
+
+\pgfkeys {
+  % we define a family, and enter it
+  /gear/.is family, /gear,
+  % we define some defaults
+  default/.style =
+  {
+    name = undefined,
+    fluff = undefined,
+    template = undefined,
+    rules = {}
+  },
+  name/.store in = \gearName,
+  fluff/.store in = \gearFluff,
+  template/.store in = \gearTemplate,
+  rules/.store in = \gearRules
+}
+\newcommand\gearBox[1][] {
+  \pgfkeys{/gear, default, #1}
+  \textbf{\gearName} \\
+  Fluff: \fluff{\gearFluff} \\
+  Template: \gearTemplate \\
+  Rules: \gearRules
+}
+
+\newcommand{\Pilot}{\hyperlink{Pilot}{Pilot}}
+\newcommand{\Auxiliary}{\hyperlink{Auxiliary}{Auxiliary }}
+\newcommand{\Main}{\hyperlink{Main}{Main }}
+\newcommand{\Heavy}{\hyperlink{Heavy}{Heavy }}
+\newcommand{\Superheavy}{\hyperlink{Superheavy}{Superheavy }}
+\newcommand{\CQB}{\hyperlink{CQB}{CQB }}
+\newcommand{\Rifle}{\hyperlink{Type}{Rifle }}
+\newcommand{\Launcher}{\hyperlink{Type}{Launcher }}
+\newcommand{\Cannon}{\hyperlink{Type}{Cannon }}
+\newcommand{\Melee}{\hyperlink{Type}{Melee }}
+\newcommand{\Nexus}{\hyperlink{Type}{Nexus }}
+\newcommand{\explosive}{\hyperlink{DamageType}{explosive }}
+\newcommand{\kinetic}{\hyperlink{DamageType}{kinetic }}
+\newcommand{\energy}{\hyperlink{DamageType}{energy }}
+\newcommand{\HeatTarget}[1]{\hyperlink{HeatTarget}{#1 Heat (Target)}}
+\newcommand{\HeatSelf}[1]{\hyperlink{HeatSelf}{#1 Heat (Self)}}
+\newcommand{\Blast}[1]{\hyperlink{Blast}{Blast #1}}
+\newcommand{\Burst}[1]{\hyperlink{Burst}{Burst #1}}
+\newcommand{\Cone}{\hyperlink{Cone}{Cone}}
+\newcommand{\Line}{\hyperlink{Line}{Line}}
+\newcommand{\AP}{\hyperlink{AP}{AP}}
+\newcommand{\Accurate}{\hyperlink{Accurate}{Accurate}}
+\newcommand{\Arcing}{\hyperlink{Arcing}{Arcing}}
+\newcommand{\Burn}[1]{\hyperlink{Burn}{Burn #1}}
+\newcommand{\Inaccurate}{\hyperlink{Inaccurate}{Inaccurate}}
+\newcommand{\Knockback}[1]{\hyperlink{Knockback}{Knockback #1}}
+\newcommand{\Loading}{\hyperlink{Loading}{Loading}}
+\newcommand{\Reliable}[1]{\hyperlink{Reliable}{Reliable #1}}
+\newcommand{\Overcharged}{\hyperlink{Overcharged}{Overcharged}}
+\newcommand{\Ordnance}{\hyperlink{Ordnance}{Ordnance}}
+\newcommand{\Seeking}{\hyperlink{Seeking}{Seeking}}
+\newcommand{\Smart}{\hyperlink{Smart}{Smart}}
+\newcommand{\Threat}[1]{\hyperlink{Threat}{Threat #1}}
+\newcommand{\Thrown}[1]{\hyperlink{Thrown}{Thrown #1}}
+\newcommand{\Clothing}{\hyperlink{Clothing}{Clothing}}
+\newcommand{\Armor}{\hyperlink{Armor}{Armor}}
+\newcommand{\Gear}{\hyperlink{Gear}{Gear}}
+\newcommand{\Upgrade}{\hyperlink{Upgrade}{Upgrade}}
+\newcommand{\Sidearm}{\hyperlink{Sidearm}{Sidearm}}
+\newcommand{\Rarity}{\hyperlink{Rarity}{Rarity}}
+\newcommand{\QuickAction}{\hyperlink{Action}{Quick Action}}
+\newcommand{\FullAction}{\hyperlink{Action}{Full Action}}
+\newcommand{\Ammo}{\hyperlink{Ammo}{Ammo}}
+\newcommand{\DangerZone}{\hyperlink{DangerZone}{Danger Zone}}
+\newcommand{\Drone}{\hyperlink{Drone}{Drone}}
+\newcommand{\Grenade}{\hyperlink{Grenade}{Grenade}}
 \newcommand{\Limited}[1]{\hyperlink{Limited}{Limited (#1)}}
+\newcommand{\Mine}{\hyperlink{Mine}{Mine}}
+\newcommand{\Protocol}{\hyperlink{Protocol}{Protocol}}
+\newcommand{\Reaction}{\hyperlink{Reaction}{Reaction}}
+\newcommand{\Resistance}{\hyperlink{Resistance}{Resistance}}
+\newcommand{\Shield}{\hyperlink{Shield}{Shield}}
+\newcommand{\Unique}{\hyperlink{Unique}{Unique}}
+\newcommand{\EndOfTurn}{\hyperlink{EndOfTurn}{EndOfTurn}}
+\newcommand{\bonusdamage}{\hyperlink{BonusDamage}{bonus damage}}
+\newcommand{\CriticalHit}{\hyperlink{CriticalHit}{Critical Hit}}
+\newcommand{\Deployable}{\hyperlink{Deployable}{Deployable}}
+\newcommand{\Mod}{\hyperlink{Mod}{Mod}}
+\newcommand{\AI}{\hyperlink{AI}{AI}}
