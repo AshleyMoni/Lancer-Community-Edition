@@ -1,9 +1,11 @@
 \documentclass[11pt]{report}
+\providecommand{\fluff}[1]{{\itshape #1}}
 
 \usepackage{import}
 \usepackage{color}
 \usepackage{parskip}
 \setlength{\parskip}{1.0\baselineskip plus2pt minus2pt}
+\usepackage{titlesec}
 \usepackage{tabu}
 \usepackage{geometry}
   \geometry{
@@ -29,6 +31,42 @@
 }
 \import{./templates/}{gear-template.tex}
 
+\titleformat
+{\chapter} % command
+[block] % shape
+{\bfseries\Huge} % format
+{} %label
+{} %sep
+{\centering} % before-code
+[] % after-code
+
+\titleformat
+{\section} % command
+[block] % shape
+{\bfseries\LARGE} % format
+{} %label
+{} %sep
+{\centering} % before-code
+[] % after-code
+
+\titleformat
+{\subsection} % command
+[block] % shape
+{\bfseries\Large} % format
+{} %label
+{} %sep
+{\centering} % before-code
+[] % after-code
+
+\titleformat
+{\subsubsection} % command
+[block] % shape
+{\bfseries\large} % format
+{} %label
+{} %sep
+{\centering} % before-code
+[] % after-code
+
 \begin{document}
 \import{./source/}{changelog}
 \newpage
@@ -42,11 +80,7 @@
 
 \import{./source/}{intro}
 \import{./source/}{cavalry}
-\newpage
-
 \import{./source/}{basicRules}
-\newpage
-
 
 \import{./source/}{licenseToKill}
 \newpage
