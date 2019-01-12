@@ -68,15 +68,45 @@
 [] % after-code
 
 \begin{document}
-\import{./source/}{changelog}
-\newpage
-
 \setcounter{secnumdepth}{-2}
 \setcounter{tocdepth}{7}
 
-\tableofcontents
-\newpage
+\pagestyle{empty}
+\begin{center}
+  \includegraphics{Cover}
+\end{center}
 
+\newpage
+\pagestyle{plain}
+\begin{titlepage}
+\vspace*{\stretch{1.0}}
+\begin{center}
+\par\noindent\rule[1cm]{0.78\textwidth}{3mm}
+{\fontsize{96}{115}\selectfont LANCER}
+\vspace{1cm}
+\par\noindent\rule{0.78\textwidth}{3mm}
+\vfill
+\huge\textbf{COMMUNITY EDITION RULEBOOK}
+\vfill
+\normalsize\textbf{By}
+
+\textbf{Miguel Lopez and Tom Parkinson Morgan}
+
+\textbf{and the Lancer community}
+\vfill
+1.8 Beta - CE pre-release\\
+Please do not reproduce without permission\\
+\end{center}
+\vspace*{\stretch{2.0}}
+\end{titlepage}
+\import{./source/}{changelog}
+
+% We set the page number to 2, so the PDF page number = the text page number
+\addtocounter{page}{2}
+
+\tableofcontents
+
+\newpage
 \import{./source/}{intro}
 \import{./source/}{cavalry}
 \import{./source/}{basicRules}
