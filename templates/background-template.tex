@@ -1,0 +1,28 @@
+% Background template
+\usepackage{pgfkeys}
+
+\providecommand{\fluff}[1]{{\itshape #1}}
+
+\pgfkeys {
+  % we define a family, and enter it
+  /background/.is family, /background,
+  % we define some defaults
+  default/.style =
+  {
+    name = undefined,
+    skillList = undefined,
+    fluff = undefined
+  },
+  name/.store in = \backgroundName,
+  skillList/.store in = \backgroundSkillList,
+  fluff/.store in = \backgroundFluff
+}
+\newcommand\backgroundBox[1][] {
+  \pgfkeys{/background, default, #1}
+  \subsection{\backgroundName}
+  
+  \textbf{Example skills}: \backgroundSkillList\\
+  \fluff{\backgroundFluff}
+}
+
+\newcommand{\Charm}{Charm}
