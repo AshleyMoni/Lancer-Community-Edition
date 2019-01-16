@@ -1,4 +1,5 @@
 \subsection{HA Barbarossa}
+
 \begin{mech}{HA}{Barbarossa}
 
 fluff{
@@ -20,9 +21,11 @@ armor = 2,
 e-defense = 6,
 size = 3,
 repair cap = 4,
-Tech Attack = 0,
+tech attack = 0,
 traits = {\textbf{Heavy FRAME:} The Barbarossa cannot be knocked back or prone by actors smaller than itself
+
 \textbf{Siege Shield:} The Barbarossa has resistance to Explosive Damage
+
 \textbf{Slow:}The Barbarossa gets +1 Difficulty on Agility checks},
 sp = 5,
 mount one = main mount,
@@ -34,14 +37,17 @@ core active name = Convert to Battery,
 core active text =
 {Quick Action,
 Your mech converts to something more resembling a gun emplacement. While this mode is active, you have the following drawbacks:
-     -   Your mech is immobilized
-     -   You cannot directly attack any target within range 5 of your mech
-     -   You can only make attacks with the weapon mounted in your Apocalypse Rail
+\begin{itemize}
+    \item Your mech is immobilized
+    -   You cannot directly attack any target within range 5 of your mech
+    -   You can only make attacks with the weapon mounted in your Apocalypse Rail
 
-     However, you gain the following benefits:
-     -   You cannot be moved (such as with a grapple) by any target smaller than you
-     -   You have resistance to heat
-     -   The weapon mounted in your Apocalypse Rail can be fired twice with the Barrage action instead of just once. If it has the loading tag, it can still be fired twice (but must be reloaded normally after)}
+    However, you gain the following benefits:
+    -   You cannot be moved (such as with a grapple) by any target smaller than you
+    -   You have resistance to heat
+    -   The weapon mounted in your Apocalypse Rail can be fired twice with the Barrage action instead of just once. If it has the loading tag, it can still be fired twice (but must be reloaded normally after)}
+\end{itemize}
+    
 ]
 \gearBox
 [name ={Siege Stabilizers},
@@ -52,8 +58,9 @@ Extend or retract your stabilizers as a quick action. Your mech is immobilized w
 
 \gearBox
 [name = {Roller Grenades},
-template={2 SP, \Limited{2}},
-rules={Quick Action, Grenade
+template={2 SP, \Limited{2}\\
+\Quick Action, \Grenade},
+rules={
 Instead of throwing these grenades normally, draw a line 15 spaces long from your mech. These grenades bounce over cover and objects up to size 1, and can pass through holes or areas as small as size 1/2. They detonate when they move through or adjacent to any actor’s space (even allied ones), dealing 2d6 explosive damage to that target only and knocking that actor back in the direction of the line 3 spaces. The target can pass an agility check to avoid the knock back and halve the damage.}]
 
 \gearBox
@@ -65,7 +72,8 @@ rules ={This drone can be deployed in an adjacent space. While deployed, once pe
 \gearBox
 [name = {Flak Cannon},
 fluff = {A quad-barreled autocannon, flak cannons are loaded with proximity-explosive shells perfect for blanketing fire. A perfect weapon for use against massed infantry or low-altitude flyers.}
-template = {\Main,\Cannon,\Reliable{1},\Range{20}
+template = {\Main,\Cannon,\\
+\Reliable{1},\Range{20},\\
 1d3 \kinetic Damage}
 rules={Any flying target hit by this weapon must pass an agility check or immediately fall.}]
 
