@@ -18,7 +18,7 @@
 \usepackage{xstring}
 \usepackage{catchfile}
 \usepackage{titlesec}
-\usepackage[mark]{gitinfo2}
+\usepackage{gitinfo2}
 
 % --------------------------
 % Templates and other
@@ -63,14 +63,6 @@
 \makeatletter
 \patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
 \makeatother
-
-% \CatchFileDef{\headfull}{.git/HEAD}{}
-% \StrGobbleRight{\headfull}{1}[\head]
-% \StrBehind[2]{\head}{/}[\branch]
-% \CatchFileDef{\commit}{.git/refs/heads/\branch}{}
-% \newcommand{\gitshort}{%
-%   \StrLeft{\commit}{8}%
-% }
 
 % --------------------------
 % Loading
@@ -166,7 +158,9 @@
 \date{} % quick hack to suppress date showing on wrong page
 \today \\
 %Document version: \texttt{\gitshort} on branch \texttt{\branch}
-Document version: \gitDescribe
+Document version: \gitAbbrevHash on branch \gitBranch, committed \gitAuthorDate 
+
+\gitDescribe
 
 \vspace{1cm}
 1.8 Beta - CE pre-release\\
