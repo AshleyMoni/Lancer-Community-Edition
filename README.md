@@ -28,6 +28,12 @@ Join the [Lancer discord!](https://discord.gg/ABx8gcf) Not only is it the home t
 
 It's an exciting time to be a fan and get in on the action, especially as we finish the final balance and polish passes on the game to get it ready for its first true release!
 
-## How can I cturn this into a pdf?
+## How can I turn this into a pdf?
 
 Anyone is welcome to submit fixes and improvements! The easiest way to compile the pdf is to use [latexmk](https://mg.readthedocs.io/latexmk.html) and [xelatex](http://xetex.sourceforge.net/). If you are on windows, these are both provided by [TeX Live](https://www.tug.org/texlive/). To build the pdf, simply run `latexmk -xelatex` or use the provided build files.  
+
+## Thanks & Acknowledgement
+
+The Lancer community project thanks the following for code, contributiuons, or support:
+
+* (rbarazzutti)[https://github.com/rbarazzutti/gitinfo2-latexmk] 
