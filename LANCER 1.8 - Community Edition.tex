@@ -25,7 +25,7 @@
 \import{./templates/}{gear-template.tex}
 
 % --- always last
-\usepackage[hidelinks]{hyperref}
+\usepackage[hidelinks,bookmarks=true]{hyperref} 
 % hypersetup, below
 
 % --------------------------
@@ -130,8 +130,8 @@
 \begingroup
 \patchcmd{\chapter}{plain}{empty}{}{}
 
-%\setcounter{secnumdepth}{-2}
-%\setcounter{tocdepth}{7}
+\setcounter{secnumdepth}{-2}
+\setcounter{tocdepth}{7}
 
 %\pagestyle{empty}
 \begin{center}
