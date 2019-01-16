@@ -1,45 +1,87 @@
-\documentclass[11pt]{report}
+\documentclass[11pt, letterpaper, openany]{memoir}
+
+% --------------------------
+% Packages
+% --------------------------
+\usepackage{varwidth}
+\usepackage{import}
+\usepackage[svgnames]{xcolor} % https://www.w3.org/TR/SVG11/types.html#ColorKeywords
+\usepackage{parskip}
+\usepackage{fontspec}
+\usepackage{titlesec}
+\usepackage{tabu}
+\usepackage{url}
+%\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{etoolbox}
+\usepackage{xstring}
+\usepackage{catchfile}
+\usepackage{titlesec}
+
+% --- always last
+\usepackage[hidelinks]{hyperref}
+% hypersetup, below, 
+
+% --------------------------
+% Configuration
+% --------------------------
+\setlength{\parskip}{1.0\baselineskip plus2pt minus2pt}
+
+\setlrmarginsandblock{25.4mm}{22.2mm}{*}
+\setulmarginsandblock{1in}{1in}{1}
+\checkandfixthelayout 
+
+\setlength{\oddsidemargin}{0pt}
+\setlength{\evensidemargin}{0pt}
+
+\interfootnotelinepenalty=10000
+\raggedright
+
+\setmainfont{Arial}
+
+\hypersetup{colorlinks=true,     
+	linkcolor=DarkBlue, % color of internal links (change box color with linkbordercolor)
+    urlcolor=blue       % color of external links
+}
+
+% Remove empty page after title
+% toto use etoolbox
+\makeatletter
+\renewcommand\mainmatter{%
+     \clearpage
+   \@mainmattertrue
+   \pagenumbering{arabic}}
+\makeatother
+
+\makeatletter
+\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+\makeatother
+
+\CatchFileDef{\headfull}{.git/HEAD.}{}
+\StrGobbleRight{\headfull}{1}[\head]
+\StrBehind[2]{\head}{/}[\branch]
+\CatchFileDef{\commit}{.git/refs/heads/\branch.}{}
+
+% --------------------------
+% Loading
+% --------------------------
+\graphicspath{ {./images/} }
+\import{./templates/}{mech-template.tex}
+\import{./templates/}{gear-template.tex}
+
+% --------------------------
+% Commands and Environments
+% --------------------------
 \providecommand{\fluff}[1]{{\itshape #1}}
 \providecommand{\punch}[1]{\textbf{\Large #1}}
-\interfootnotelinepenalty=10000
-\usepackage{varwidth}
+
 \newenvironment{loreQuote}
 {\begin{center}
 \begin{varwidth}{\textwidth}
   \small \itshape}
 {\end{varwidth}
 \end{center}}
-
-\usepackage{import}
-\usepackage{color}
-\usepackage{parskip}
-\setlength{\parskip}{1.0\baselineskip plus2pt minus2pt}
-\usepackage{titlesec}
-\usepackage{tabu}
-\usepackage{geometry}
-  \geometry{
-  letterpaper,
-  left=25.4mm,
-  right=22.2mm,
-  top=1in,
-  bottom=1in
-  }
-\raggedright
-\usepackage{fontspec}
-\setmainfont{Arial}
-\usepackage{graphicx}
-\usepackage{wrapfig}
-\graphicspath{ {./images/} }
-
-\import{./templates/}{mech-template.tex}
-
-% Hyperref should always be IMPORTED LAST
-\usepackage[hidelinks]{hyperref}
-\hypersetup{
-    colorlinks,
-    allcolors=black
-}
-\import{./templates/}{gear-template.tex}
 
 \titleformat
 {\chapter} % command
@@ -78,57 +120,72 @@
 [] % after-code
 
 \begin{document}
-\setcounter{secnumdepth}{-2}
-\setcounter{tocdepth}{7}
-
+\frontmatter
 \pagestyle{empty}
+\pagenumbering{gobble}
+\begingroup
+\patchcmd{\chapter}{plain}{empty}{}{}
+
+%\setcounter{secnumdepth}{-2}
+%\setcounter{tocdepth}{7}
+
+%\pagestyle{empty}
 \begin{center}
   \includegraphics{Cover}
 \end{center}
 
-\newpage
-\pagestyle{plain}
-\begin{titlepage}
+%\newpage
+%\pagestyle{plain}
+%\begin{titlingpage}
 \vspace*{\stretch{1.0}}
 \begin{center}
-\par\noindent\rule[1cm]{0.78\textwidth}{3mm}
+%\par\noindent\rule[1cm]{0.78\textwidth}{3mm}
+\rule[1cm]{0.78\textwidth}{3mm}
 {\fontsize{96}{115}\selectfont LANCER}
-\vspace{1cm}
-\par\noindent\rule{0.78\textwidth}{3mm}
-\vfill
+\rule[-1cm]{0.78\textwidth}{3mm}
+
+\vspace{2cm}
 \huge\textbf{COMMUNITY EDITION RULEBOOK}
-\vfill
-\normalsize\textbf{By}
 
-\textbf{Miguel Lopez and Tom Parkinson Morgan}
+\vspace{4cm}
+\normalsize\textbf{By} \\
+% TODO: add hyperlinks
+\textbf{Miguel Lopez and Tom Parkinson Morgan}\\
+\textbf{and the Lancer community}\\
 
-\textbf{and the Lancer community}
-\vfill
+\vspace{2cm}
+\date{} % quick hack to suppress date showing on wrong page
+\today \\
+Document version: \texttt{\commit}on branch \texttt{\branch}
+
+\vspace{1cm}
 1.8 Beta - CE pre-release\\
-Please do not reproduce without permission\\
+Please do not reproduce without permission
+\clearpage
 \end{center}
-\vspace*{\stretch{2.0}}
-\end{titlepage}
-\import{./source/}{changelog}
 
-% We set the page number to 2, so the PDF page number = the text page number
-\addtocounter{page}{2}
+\import{source/}{changelog}
+\clearpage
 
 \tableofcontents
+\endgroup % end of empty grounp
+\mainmatter
+\pagestyle{plain}
+% % We set the page number to 2, so the PDF page number = the text page number
+\addtocounter{page}{2}
 
-\newpage
-\import{./source/}{intro}
-\import{./source/}{cavalry}
-\import{./source/}{basicRules}
-\import{./source/}{licenseToKill}
-\import{./source/}{pilot}
-\import{./source/}{basicStructure}
-\import{./source/}{theMech}
-\import{./source/}{mechCombat}
-\import{./source/}{compendium}
-\import{./source/}{theGM}
-\import{./source/}{gmToolkit}
-\import{./source/}{npc}
-\import{./source/}{lore}
+\import{source/}{intro} 
+\import{source/}{cavalry}
+\import{source/}{basicRules.tex}
+\import{source/}{licenseToKill.tex}
+\import{source/}{pilot.tex}
+\import{source/}{basicStructure.tex}
+\import{source/}{theMech.tex}
+\import{source/}{mechCombat.tex}
+\import{source/}{compendium.tex}
+\import{source/}{theGM.tex}
+\import{source/}{gmToolkit.tex}
+\import{source/}{npc.tex}
+\import{source/}{lore.tex}
 
 \end{document}
