@@ -19,9 +19,14 @@
 \usepackage{catchfile}
 \usepackage{titlesec}
 
+% --------------------------
+% Templates and other
+\import{./templates/}{mech-template.tex}
+\import{./templates/}{gear-template.tex}
+
 % --- always last
 \usepackage[hidelinks]{hyperref}
-% hypersetup, below, 
+% hypersetup, below
 
 % --------------------------
 % Configuration
@@ -40,9 +45,9 @@
 
 \setmainfont{Arial}
 
-\hypersetup{colorlinks=true,     
-	linkcolor=DarkBlue, % color of internal links (change box color with linkbordercolor)
-    urlcolor=blue       % color of external links
+\hypersetup{colorlinks=false     
+	%linkcolor=DarkBlue, % color of internal links (change box color with linkbordercolor)
+  %  urlcolor=blue       % color of external links
 }
 
 % Remove empty page after title
@@ -67,8 +72,7 @@
 % Loading
 % --------------------------
 \graphicspath{ {./images/} }
-\import{./templates/}{mech-template.tex}
-\import{./templates/}{gear-template.tex}
+
 
 % --------------------------
 % Commands and Environments
