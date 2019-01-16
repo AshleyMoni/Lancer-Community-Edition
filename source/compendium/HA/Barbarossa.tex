@@ -61,15 +61,15 @@ Extend or retract your stabilizers as a quick action. Your mech is immobilized w
 \gearBox
 [name = {Roller Grenades},
 template={2 SP, \Limited{2}\\
-\Quick Action, \Grenade},
+\QuickAction, \Grenade},
 rules={
 Instead of throwing these grenades normally, draw a line 15 spaces long from your mech. These grenades bounce over cover and objects up to size 1, and can pass through holes or areas as small as size 1/2. They detonate when they move through or adjacent to any actor’s space (even allied ones), dealing 2d6 explosive damage to that target only and knocking that actor back in the direction of the line 3 spaces. The target can pass an agility check to avoid the knock back and halve the damage.}]
 
 \gearBox
 [name = {Auto-Loader Drone},
 fluff={Auto-Loader Drones are half-size, many-legged arthropod-analogous drone systems that assist sectionmate chassis in loading ordinance, maintaining powerline hookups, and cycling magazine-fed weapons.}
-template={2 SP, \Limited{1},\Drone}
-rules ={This drone can be deployed in an adjacent space. While deployed, once per round, any one adjacent mech can reload a weapon with the Loading tag as a quick action. It lasts until the end of the current scene, then deactivates.}
+template={2 SP, \Limited{1},\Drone},
+rules = {This drone can be deployed in an adjacent space. While deployed, once per round, any one adjacent mech can reload a weapon with the Loading tag as a quick action. It lasts until the end of the current scene, then deactivates.}
 ]
 
 \gearBox
@@ -77,7 +77,7 @@ rules ={This drone can be deployed in an adjacent space. While deployed, once pe
 fluff = {A quad-barreled autocannon, flak cannons are loaded with proximity-explosive shells perfect for blanketing fire. A perfect weapon for use against massed infantry or low-altitude flyers.}
 template = {\Main,\Cannon,\\
 \Reliable{1},\Range{20},\\
-1d3 \kinetic Damage}
+1d3 \kinetic Damage},
 rules={Any flying target hit by this weapon must pass an agility check or immediately fall.}]
 
 \gearBox
@@ -91,8 +91,8 @@ rules={Once on your turn, you can take 1d3+1 heat to reload any weapon with the 
 [name={Siege Cannon},
 fluff={Siege Cannons are the Armory‘s core-squadron level artillery, a howitzer-style 10“ gun fed by a self-contained loading system. Commonly mounted on rear-line mechs deployed in an artillery/ squad support role, the Siege Cannon is capable of direct fire should the necessities of dynamic combat call for it. Siege cannons can fire HE and canister FRAMEs, depending on the target.},
 template={\Superheavy,\Cannon,\\
-\HeatSelf{4},\Arcing,\Ordnance,\Loading,\\
-\Range{30}\Blast{2}\\
+\HeatSelf{4}, \Arcing, \Ordnance, \Loading,\\
+\Range{30}, \Blast{2}\\
 3d6 \explosive damage}
 ]
 \end{mech}
