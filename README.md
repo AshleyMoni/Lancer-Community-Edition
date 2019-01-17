@@ -35,5 +35,3 @@ Anyone is welcome to submit fixes and improvements! The easiest way to compile t
 ## Thanks & Acknowledgement
 
 The Lancer community project thanks the following for code, contributiuons, or support:
-
-* (rbarazzutti)[https://github.com/rbarazzutti/gitinfo2-latexmk] 
