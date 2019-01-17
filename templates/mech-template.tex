@@ -1,5 +1,6 @@
 \usepackage{enumerate}
 \usepackage{pgfkeys}
+\usepackage{xcolor,colortbl,tabularx,chngpage}
 
 \providecommand{\fluff}[1]{{\itshape #1}}
 
@@ -92,4 +93,38 @@ License: \\
   \frameCoreSystemText \\
   \textbf{\frameCoreActiveName} \\
   \frameCoreActiveText \\
+}
+
+\definecolor{Gray}{gray}{0.85}
+\newcommand\frameTable[1][] {
+\pgfkeys{/frame, default, #1}
+\begin{table}
+
+  \begin{adjustwidth}{-2cm}{-2cm}
+    \begin{center}
+      \begin{tabularx}{140mm}{| c | c | c | c | c |}
+        \hline
+        \rowcolor{Gray}
+        \multicolumn{5}{|c|}{\textbf{\frameName}} \\[5mm] \hline
+        \textbf{HP:} \frameHP & \textbf{Evasion:} \frameEvasion & \textbf{Speed:} \frameSpeed & \textbf{Heat Cap:} \frameHeatCap & \textbf{Sensors:} \frameSensors \\ \hline
+        \textbf{Armor:} \frameArmor & \textbf{E-Defense:} \frameEDefense & \textbf{Size:} \frameSize & \textbf{Repair Cap:} \frameRepairCap & \textbf{Tech Attack:} \frameTechAttack \\ \hline
+        \rowcolor{Gray}
+        \multicolumn{5}{|c|}{\textbf{TRAITS:}} \\[5mm] \hline
+        \multicolumn{5}{|p{135mm}|}{\frameTraits} \\ \hline
+        \rowcolor{Gray}
+        \multicolumn{5}{|c|}{\textbf{SYSTEM POINTS:} \frameSP} \\[5mm] \hline
+        \rowcolor{Gray}
+        \multicolumn{5}{|c|}{\textbf{MOUNTS:}} \\[5mm] \hline
+        \multicolumn{2}{|p{30mm}|}{\frameMountOne} & \multicolumn{2}{|p{30mm}|}{\frameMountTwo} & \multicolumn{1}{|l|}{\frameMountThree} \\ \hline
+        \rowcolor{Gray}
+        \multicolumn{5}{|c|}{\textbf{CORE system}} \\[5mm] \hline
+        \multicolumn{5}{|c|}{\textbf{\frameCoreSystemName}} \\
+        \multicolumn{5}{|p{135mm}|}{\frameCoreSystemText} \\
+        \multicolumn{5}{|p{135mm}|}{\textbf{\frameCoreActiveName}} \\
+        \multicolumn{5}{|p{135mm}|}{\frameCoreActiveText} \\ \hline
+      \end{tabularx}
+    \end{center}
+  \end{adjustwidth}
+
+\end{table}
 }
