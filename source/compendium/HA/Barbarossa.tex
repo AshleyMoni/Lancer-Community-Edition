@@ -36,30 +36,27 @@ core system text ={The HA Apocalypse Rail is a spinal mount augmentation that ad
 core active name = Convert to Battery,
 core active text ={\QuickAction,
 Your mech converts to something more resembling a gun emplacement. While this mode is active, you have the following drawbacks:
-\begin{itemize}
-    \item Your mech is immobilized
-    \item You cannot directly attack any target within range 5 of your mech
-    \item You can only make attacks with the weapon mounted in your Apocalypse Rail
-\end{itemize}
+    Your mech is immobilized
+    You cannot directly attack any target within range 5 of your mech
+    You can only make attacks with the weapon mounted in your Apocalypse Rail
 
 However, you gain the following benefits:
-\begin{itemize}
-    \item You cannot be moved (such as with a grapple) by any target smaller than you
-    \item You have resistance to heat
-    \item The weapon mounted in your Apocalypse Rail can be fired twice with the Barrage action instead of just once. If it has the loading tag, it can still be fired twice (but must be reloaded normally after)
-\end{itemize}
+    You cannot be moved (such as with a grapple) by any target smaller than you
+    You have resistance to heat
+    The weapon mounted in your Apocalypse Rail can be fired twice with the Barrage action instead of just once. If it has the loading tag, it can still be fired twice (but must be reloaded normally after)
+}
 ]
 
 \gearBox
-[name ={Siege Stabilizers},
-fluff ={Some weapons require further stabilization for optimal use: with Armory-sanctioned Siege Stabilizers installed, a chassis becomes a stable firing platform for any weapon.}
-template={1 SP, \\
+[name = {Siege Stabilizers},
+fluff = {Some weapons require further stabilization for optimal use: with Armory-sanctioned Siege Stabilizers installed, a chassis becomes a stable firing platform for any weapon.}
+template = {1 SP, \\
 \QuickAction},
 rules={Extend or retract your stabilizers as a quick action. Your mech is immobilized while this system is active, but you can increase the base range of your ranged weapon attacks by +5. You cannot directly target any target within range 5 when this system is activated.}]
 
 \gearBox
 [name = {Roller Grenades},
-template={2 SP, \Limited{2} \\
+template = {2 SP, \Limited{2} \\
 \QuickAction, \Grenade},
 rules={
 Instead of throwing these grenades normally, draw a line 15 spaces long from your mech. These grenades bounce over cover and objects up to size 1, and can pass through holes or areas as small as size 1/2. They detonate when they move through or adjacent to any actor’s space (even allied ones), dealing 2d6 explosive damage to that target only and knocking that actor back in the direction of the line 3 spaces. The target can pass an agility check to avoid the knock back and halve the damage.}]
