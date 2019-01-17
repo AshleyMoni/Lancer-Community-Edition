@@ -21,8 +21,10 @@
 }
 
 \newenvironment{epiQuote} {
-  \vspace*{\baselineskip}
+  \vspace*{0.5\baselineskip}
   \begin{quote}\begin{obeylines}
+  \renewcommand{\baselinestretch}{0.8} 
+  \setlength{\parskip}{0.5em}
   \normalfont\itshape\small
 
 } {
