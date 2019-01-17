@@ -27,43 +27,32 @@
 \subimport{./npcClasses/}{support}
 \subimport{./npcClasses/}{technical}
 
-                                     GENERIC OPTIONAL MODULES:
+\section{Generic Optional Modules}
 
 Any of the above NPCs can choose one of these modules when choosing an optional module.
 
+\npcGearBox[name = {Armored},
+template = {Trait},
+rules = {This mech gains +1 armor, up to a maximum of +4}]
 
-Armored
-Trait
-This mech gains +1 armor, up to a maximum of +4
+\npcGearBox[name = {Boosted Reactor},
+template = {Trait},
+rules = {This mech gains +2 heat capacity}]
 
+\npcGearBox[name = {Jump Jets},
+template = {System},
+rules = {This mech can Fly when it boosts}]
 
-Boosted Reactor
-Trait
+\npcGearBox[name = {Reinforced},
+template = {Trait},
+rules = {This mech gains +5 HP}]
 
-This mech gains +2 heat capacity
+\npcGearBox[name = {SSC Core Flight System},
+template = {System},
+rules = {This mech can Fly when it moves or boosts and has perfect flight (it doesn’t need to land). It
+  generates 2 heat/turn while this module is active at the end of each of its turns.}]
 
-
-Jump Jets
-System
-
-This mech can Fly when it boosts
-
-
-Reinforced
-Trait
-
-This mech gains +5 HP
-
-
-SSC Core Flight System
-System
-
-This mech can Fly when it moves or boosts and has perfect flight (it doesn’t need to land). It
-generates 2 heat/turn while this module is active at the end of each of its turns.
-
-
-Tactical Cloak
-System, Quick Action
-
-This mech becomes invisible. If it takes an action, reaction, or overheats it loses this invisibility
-until the start of its next turn.
+\npcGearBox[name = {Tactical Cloak},
+template = {System, \QuickAction},
+rules = {This mech becomes invisible. If it takes an action, reaction, or overheats it loses this invisibility
+  until the start of its next turn.}]
