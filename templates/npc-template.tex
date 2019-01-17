@@ -6,7 +6,6 @@
 \newenvironment{npc}[1]
 {
   \renewcommand{\npcName}{#1}
-  \npcName \\
 }
 {}
 
@@ -44,6 +43,21 @@
   size/.store in = \npcSize,
 }
 
+\pgfkeys {
+  % we define a family, and enter it
+  /npcGear/.is family, /npcGear,
+  % we define some defaults
+  default/.style =
+  {
+    name = undefined,
+    template = undefined,
+    rules = {}
+  },
+  name/.store in = \gearName,
+  template/.store in = \gearTemplate,
+  rules/.store in = \gearRules
+}
+
 \newcommand\npcBox[1][] {
   \pgfkeys{/npc, default, #1}
   \npcName \\
@@ -58,5 +72,27 @@
   Sensors: \npcSensors \\
   Armor: \npcArmor \\
   E-Defense: \npcEDefense \\
-  Size: \npcSize \\
+  Size: \npcSize
+}
+
+\newcommand\tierBox[1][] {
+  \pgfkeys{/npc, default, #1}
+  Hull: \npcHull \\
+  Agility: \npcAgility \\
+  Systems: \npcSystems \\
+  Engineering: \npcEngineering \\
+  HP: \npcHP \\
+  Evasion: \npcEvasion \\
+  Speed: \npcSpeed \\
+  Heat Cap: \npcHeatCap \\
+  Sensors: \npcSensors \\
+  Armor: \npcArmor \\
+  E-Defense: \npcEDefense
+}
+
+\newcommand\npcGearBox[1][] {
+  \pgfkeys{/npcGear, default, #1}
+  \textit{\gearName} \\
+  Template: \gearTemplate \\
+  Rules: \gearRules
 }
