@@ -1,4 +1,6 @@
 \documentclass[11pt, letterpaper, openany]{memoir}
+\interfootnotelinepenalty=10000
+\usepackage{varwidth}
 
 % --------------------------
 % Packages
@@ -6,6 +8,7 @@
 \usepackage{varwidth}
 \usepackage{import}
 \usepackage[svgnames]{xcolor} % https://www.w3.org/TR/SVG11/types.html#ColorKeywords
+\usepackage{lancer}
 \usepackage{parskip}
 \usepackage{fontspec}
 \usepackage{titlesec}
@@ -78,13 +81,6 @@
 % --------------------------
 \providecommand{\fluff}[1]{{\itshape #1}}
 \providecommand{\punch}[1]{\textbf{\Large #1}}
-
-\newenvironment{loreQuote}
-{\begin{center}
-\begin{varwidth}{\textwidth}
-  \small \itshape}
-{\end{varwidth}
-\end{center}}
 
 \titleformat
 {\chapter} % command

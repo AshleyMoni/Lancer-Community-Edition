@@ -1,0 +1,24 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{lancer}[2019/01/17 Lancer Style Package]
+
+\providecommand{\fluff}[1]{{\itshape #1}}
+\providecommand{\punch}[1]{\textbf{\Large #1}}
+
+% \newenvironment{loreQuote}
+% {\begin{center}
+% \begin{varwidth}{\textwidth}
+%   \small \itshape}
+% {\end{varwidth}
+% \end{center}}
+
+\newenvironment{loreQuote} {
+  \vspace*{\baselineskip}
+  \begin{quote}
+  \normalfont\itshape
+
+} {
+  \end{quote}
+}
+
+% must be end
+\endinput
