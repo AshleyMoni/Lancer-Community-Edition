@@ -1,118 +1,104 @@
 \subsection{Ace}
-                                                  ACE
+\begin{npc}{Ace}
 
-A pilot more comfortable the closer they get to their roots, the Ace enemy-type employs high-speed
-
+\fluff{A pilot more comfortable the closer they get to their roots, the Ace enemy-type employs high-speed
 strafing runs, agile maneuvers, and a reckless approach to piloting their mech. Cocky and self-assured,
-Ace-type enemies relish a good duel.
+\textnormal{Ace}-type enemies relish a good duel.}
 
+\npcBox
+[hull = -1,
+agility = +3,
+systems = +1,
+engineering = +0,
+hp = 16,
+evasion = 11,
+e-defense = 9,
+heat cap = 8,
+armor = 0,
+speed = 6,
+sensors = 10,
+size = 1/2 or 1]
 
- ACE
+\textbf{Base systems:}
 
- Mech
+\npcGearBox[name = {SS Corpro flight system},
+template = {System},
+rules = {Whenever this mech moves or boost, it can fly.}]
 
- Hull       Agility     Systems       Engineering
+\npcGearBox[name = {Missile Launcher},
+template = {\Main \Launcher\\
+  +1 vs evasion/tier\\
+  \Seeking\\
+  Range 10, \Blast{1}\\
+  4/6/8 \explosive damage}]
 
- -2         +3          +1            +0
+\textbf{Optional systems:}
 
- HP         Evasion     E-defense     Heat Cap.
-
- 16         11          9             8
-
- Armor      Speed       Sensors       Size
-
- 0          6           10            1/2 or 1
-
-Base systems:
-
-SS Corpro flight system
-System
-
-Whenever this mech moves or boost, it can fly.
-
-
-Missile Launcher
-Main Launcher
-
-+1 vs evasion/tier
-
-Seeking
-
-Range 10, Blast 1
-
-4/6/8 explosive damage
-
-
-Optional systems:
-Bombing Bay
-System, Limited (6)
-
-1/turn
-
-When the mech flies while it moves or boosts, it can drop a bomb on one target below as a free
+\npcGearBox[name = {Bombing Bay},
+template = {System, \Limited{6}\\
+  1/turn},
+rules = {When the mech flies while it moves or boosts, it can drop a bomb on one target below as a free
 action it that it passes over or adjacent to. Bombs create a blast 1 area with at least 1 square on
-their target. All affected targets must pass an agility check or take 6/9/12 explosive damage and
-be knocked prone.
+their target. All affected targets must pass an agility check or take 6/9/12 \explosive damage and
+be knocked prone.}]
 
+\npcGearBox[name = {Strafing Module},
+template = {System, \QuickAction\\
+1/round},
+rules = {The mech flies its speed in any direction in a strafing run, dealing 3/5/7 \kinetic damage to any
+  enemy it passes over or adjacent to (no roll required).}]
 
+\npcGearBox[name = {Burst/Dash module},
+template = {System\\
+  Recharge (5+)},
+rules = {The mech may activate this module instead of moving normally, engaging powerful thrusters. It
+  flies its speed in a straight line in any direction. This movement doesn’t provoke reactions,
+  ignores, engagement, and any mechs engaged with the target when it activates this module
+  must pass an agility check or be knocked prone.}]
 
+\npcGearBox[name = {Chaff Launchers},
+template = {System, \Reaction\\
+Recharge (6+)},
+rules = {In response to any hostile tech action or attack, the mech launches chaff and engages digital
+  scramblers, causing the attack to miss, and granting it immunity to tech attacks and ranged or
+  melee attacks with the smart keyword until the end of its next turn.}]
 
+\npcGearBox[name = {Attitude Thrusters},
+template = {System, \Reaction\\
+  1/round, Recharge (5+)},
+rules = {In response to being hit by any ranged attack, the mech does a barrel roll, flying 3 in any
+  direction and gaining resistance to all the damage of that attack.}]
 
-Strafing Module
-System, Quick Action
+\textbf{Tier II:}
 
-1/round
-
-The mech flies its speed in any direction in a strafing run, dealing 3/5/7 kinetic damage to any
-enemy it passes over or adjacent to (no roll required).
-
-
-Burst/Dash module
-System
-
-Recharge (5+)
-
-The mech may activate this module instead of moving normally, engaging powerful thrusters. It
-flies its speed in a straight line in any direction. This movement doesn’t provoke reactions,
-ignores, engagement, and any mechs engaged with the target when it activates this module
-must pass an agility check or be knocked prone.
-
-
-Chaff Launchers
-System, Reaction
-
-Recharge (6+)
-
-In response to any hostile tech action or attack, the mech launches chaff and engages digital
-scramblers, causing the attack to miss, and granting it immunity to tech attacks and ranged or
-melee attacks with the smart keyword until the end of its next turn.
-
-
-Attitude Thrusters
-System, Reaction
-
-1/round, Recharge (5+)
-
-In response to being hit by any ranged attack, the mech does a barrel roll, flying 3 in any
-direction and gaining resistance to all the damage of that attack.
-
-
-Tier II:
-
-HP: + 2
-
-
-          Evade    E-D    Heat    H     A     S    E        Armor       Spd       Sense
-
-          14       10     8       -2    +4    +2   +1       0            7        10
+\tierBox
+[hp = 18,
+evasion = 14,
+e-defense = 10,
+heat cap = 8,
+hull = -2,
+agility = +4,
+systems = +2,
+engineering = +1,
+armor = 0,
+speed = 7,
+sensors = 10]
 
 All agility checks made as a response to the Ace’s attacks are made at +1 Difficulty.
 
+\textbf{Tier III:}
 
-Tier III:
-HP + 2
+\tierBox
+[hp = 20,
+evasion = 18,
+e-defense = 11,
+heat cap = 8,
+hull = -2,
+agility = +6,
+systems = +3,
+engineering = +1,
+armor = 0,
+speed = 8,
+sensors = 10]
 
-
-          Evade    E-D    Heat    H     A     S    E        Armor       Spd       Sense
-
-          18       11     8       -2    +6    +3   +1       0           8         10
+\end{npc}

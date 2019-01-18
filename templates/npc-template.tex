@@ -1,0 +1,98 @@
+\usepackage{pgfkeys}
+
+\providecommand{\fluff}[1]{{\itshape #1}}
+
+\providecommand\npcName{}
+\newenvironment{npc}[1]
+{
+  \renewcommand{\npcName}{#1}
+}
+{}
+
+\pgfkeys {
+  % we define a family, and enter it
+  /npc/.is family, /npc,
+  % we define some defaults
+  default/.style =
+  {
+    hull = undefined,
+    agility = undefined,
+    systems = undefined,
+    engineering = undefined,
+    hp = undefined,
+    evasion = undefined,
+    speed = undefined,
+    heat cap = undefined,
+    sensors = undefined,
+    armor = undefined,
+    e-defense = undefined,
+    size = undefined,
+  },
+  % we define some keys
+  hull/.store in = \npcHull,
+  agility/.store in = \npcAgility,
+  systems/.store in = \npcSystems,
+  engineering/.store in = \npcEngineering,
+  hp/.store in = \npcHP,
+  evasion/.store in = \npcEvasion,
+  speed/.store in = \npcSpeed,
+  heat cap/.store in = \npcHeatCap,
+  sensors/.store in = \npcSensors,
+  armor/.store in = \npcArmor,
+  e-defense/.store in = \npcEDefense,
+  size/.store in = \npcSize,
+}
+
+\pgfkeys {
+  % we define a family, and enter it
+  /npcGear/.is family, /npcGear,
+  % we define some defaults
+  default/.style =
+  {
+    name = undefined,
+    template = undefined,
+    rules = {}
+  },
+  name/.store in = \gearName,
+  template/.store in = \gearTemplate,
+  rules/.store in = \gearRules
+}
+
+\newcommand\npcBox[1][] {
+  \pgfkeys{/npc, default, #1}
+  \npcName \\
+  Hull: \npcHull \\
+  Agility: \npcAgility \\
+  Systems: \npcSystems \\
+  Engineering: \npcEngineering \\
+  HP: \npcHP \\
+  Evasion: \npcEvasion \\
+  Speed: \npcSpeed \\
+  Heat Cap: \npcHeatCap \\
+  Sensors: \npcSensors \\
+  Armor: \npcArmor \\
+  E-Defense: \npcEDefense \\
+  Size: \npcSize
+}
+
+\newcommand\tierBox[1][] {
+  \pgfkeys{/npc, default, #1}
+  Hull: \npcHull \\
+  Agility: \npcAgility \\
+  Systems: \npcSystems \\
+  Engineering: \npcEngineering \\
+  HP: \npcHP \\
+  Evasion: \npcEvasion \\
+  Speed: \npcSpeed \\
+  Heat Cap: \npcHeatCap \\
+  Sensors: \npcSensors \\
+  Armor: \npcArmor \\
+  E-Defense: \npcEDefense
+}
+
+\newcommand\npcGearBox[1][] {
+  \pgfkeys{/npcGear, default, #1}
+  \textit{\gearName} \\
+  Template: \gearTemplate \\
+  Rules: \gearRules
+}
