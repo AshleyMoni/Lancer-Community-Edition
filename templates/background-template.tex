@@ -1,0 +1,49 @@
+% Background template
+\usepackage{pgfkeys}
+
+\providecommand{\fluff}[1]{{\itshape #1}}
+
+\pgfkeys {
+  % we define a family, and enter it
+  /background/.is family, /background,
+  % we define some defaults
+  default/.style =
+  {
+    name = undefined,
+    skillList = undefined,
+    fluff = undefined
+  },
+  name/.store in = \backgroundName,
+  skillList/.store in = \backgroundSkillList,
+  fluff/.store in = \backgroundFluff
+}
+\newcommand\backgroundBox[1][] {
+  \pgfkeys{/background, default, #1}
+  \subsection{\backgroundName}
+
+  \textbf{Example skills}: \backgroundSkillList\\
+  \fluff{\backgroundFluff}
+}
+
+\newcommand{\Assault}{Assault}
+\newcommand{\Fists}{Apply Fists to Faces}
+\newcommand{\Blow}{Blow Something Up}
+\newcommand{\Charm}{Charm}
+\newcommand{\Invent}{Invent or Create}
+\newcommand{\Investigate}{Investigate}
+\newcommand{\Fast}{Get Somewhere Fast}
+\newcommand{\Get}{Get a Hold of Something}
+\newcommand{\Fix}{Fix, Hack, or Wreck}
+\newcommand{\Flash}{Flash}
+\newcommand{\Lead}{Lead or Inspire}
+\newcommand{\Threaten}{Threaten}
+\newcommand{\Control}{Take Control}
+\newcommand{\TakeOut}{Take Someone Out}
+\newcommand{\Patch}{Patch}
+\newcommand{\Rank}{Pull Rank}
+\newcommand{\Survive}{Survive}
+\newcommand{\Cool}{Stay Cool and Collected}
+\newcommand{\Spot}{Spot}
+\newcommand{\Read}{Read a Situation}
+\newcommand{\Unseen}{Unseen and Unheard}
+\newcommand{\Streets}{Word on the Streets}
