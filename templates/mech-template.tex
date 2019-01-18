@@ -1,6 +1,6 @@
 \usepackage{enumerate}
 \usepackage{pgfkeys}
-\usepackage{xcolor,colortbl,longtable,float}
+\usepackage{xcolor,colortbl,longtable,float,supertabular}
 
 \providecommand{\fluff}[1]{{\itshape #1}}
 
@@ -71,38 +71,42 @@ License: \\
   core active text/.store in = \frameCoreActiveText,
 }
 
-\newcommand\frameBox[1][] {
-  \pgfkeys{/frame, default, #1}
-  \mechName \\
-  HP: \frameHP \\
-  Evasion: \frameEvasion \\
-  Speed: \frameSpeed \\
-  Heat Cap: \frameHeatCap \\
-  Sensors: \frameSensors \\
-  Armor: \frameArmor \\
-  E-Defense: \frameEDefense \\
-  Size: \frameSize \\
-  Repair Cap: \frameRepairCap \\
-  Tech Attack: \frameTechAttack \\
-  System Points: \frameSP \\
-  Traits: \frameTraits \\
-  Mount 1: \frameMountOne \\
-  Mount 2: \frameMountTwo \\
-  Mount 3: \frameMountThree \\
-  \textbf{\frameCoreSystemName} \\
-  \frameCoreSystemText \\
-  \textbf{\frameCoreActiveName} \\
-  \frameCoreActiveText \\
-}
+%\newcommand\frameBox[1][] {
+%  \pgfkeys{/frame, default, #1}
+%  \mechName \\
+%  HP: \frameHP \\
+%  Evasion: \frameEvasion \\
+%  Speed: \frameSpeed \\
+%  Heat Cap: \frameHeatCap \\
+%  Sensors: \frameSensors \\
+%  Armor: \frameArmor \\
+%  E-Defense: \frameEDefense \\
+%  Size: \frameSize \\
+%  Repair Cap: \frameRepairCap \\
+%  Tech Attack: \frameTechAttack \\
+%  System Points: \frameSP \\
+%  Traits: \frameTraits \\
+%  Mount 1: \frameMountOne \\
+%  Mount 2: \frameMountTwo \\
+%  Mount 3: \frameMountThree \\
+%  \textbf{\frameCoreSystemName} \\
+%  \frameCoreSystemText \\
+%  \textbf{\frameCoreActiveName} \\
+%  \frameCoreActiveText \\
+%}
 
 \definecolor{Gray}{gray}{0.85}
-\newcommand\frameTable[1][] {
+\newcommand\frameBox[1][] {
 \pgfkeys{/frame, default, #1}
-\begin{table}[H]
+%\begin{table}[H]
 
 
     \begin{center}
-      \begin{longtable}{| c | c | c | c | c |}
+      \tablehead{%
+      \hline}
+      \tabletail{%
+      \hline}
+      \begin{supertabular}{| p{25mm} | p{25mm} | p{25mm} | p{25mm} | p{25mm} |}
         \hline
         \rowcolor{Gray}
         \multicolumn{5}{|c|}{\textbf{\mechName}} \\[5mm] \hline
@@ -110,20 +114,20 @@ License: \\
         \textbf{Armor:} \frameArmor & \textbf{E-Defense:} \frameEDefense & \textbf{Size:} \frameSize & \textbf{Repair Cap:} \frameRepairCap & \textbf{Tech Attack:} \frameTechAttack \\ \hline
         \rowcolor{Gray}
         \multicolumn{5}{|c|}{\textbf{TRAITS:}} \\[5mm] \hline
-        \multicolumn{5}{|p{135mm}|}{\frameTraits} \\ \hline
+        \multicolumn{5}{|p{150mm}|}{\frameTraits} \\ \hline
         \rowcolor{Gray}
         \multicolumn{5}{|c|}{\textbf{SYSTEM POINTS:} \frameSP} \\[5mm] \hline
         \rowcolor{Gray}
         \multicolumn{5}{|c|}{\textbf{MOUNTS:}} \\[5mm] \hline
-        \multicolumn{2}{|p{30mm}|}{\frameMountOne} & \multicolumn{2}{|p{30mm}|}{\frameMountTwo} & \multicolumn{1}{|l|}{\frameMountThree} \\ \hline
+        \multicolumn{2}{|p{50mm}|}{\frameMountOne} & \multicolumn{2}{|p{50mm}|}{\frameMountTwo} & \multicolumn{1}{|l|}{\frameMountThree} \\ \hline
         \rowcolor{Gray}
         \multicolumn{5}{|c|}{\textbf{CORE system}} \\[5mm] \hline
         \multicolumn{5}{|c|}{\textbf{\frameCoreSystemName}} \\
-        \multicolumn{5}{|p{135mm}|}{\fluff{\frameCoreSystemText}} \\
-        \multicolumn{5}{|p{135mm}|}{\textbf{\frameCoreActiveName}} \\
-        \multicolumn{5}{|p{135mm}|}{\frameCoreActiveText} \\ \hline
-      \end{longtable}
+        \multicolumn{5}{|p{150mm}|}{\fluff{\frameCoreSystemText}} \\
+        \multicolumn{5}{|p{150mm}|}{\textbf{\frameCoreActiveName}} \\
+        \multicolumn{5}{|p{150mm}|}{\frameCoreActiveText} \\[2mm] \hline
+      \end{supertabular}
     \end{center}
 
-\end{table}
+%\end{table}
 }
