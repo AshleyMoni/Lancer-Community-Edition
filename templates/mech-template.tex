@@ -1,6 +1,7 @@
 \usepackage{enumerate}
 \usepackage{pgfkeys}
 \usepackage{xcolor,colortbl,longtable,float,supertabular,stringstrings,enumitem}
+\usepackage[export]{adjustbox} %allows for control of max image dimensions. 
 
 \providecommand{\fluff}[1]{{\itshape #1}}
 
@@ -15,7 +16,8 @@
 
 \newenvironment{mech}[2]
 {
-  \renewcommand{\corpName}{#1}
+\clearpage  
+\renewcommand{\corpName}{#1}
   \renewcommand{\mechName}{#2}
   % \corpName \space \mechName \\
 
@@ -32,12 +34,14 @@
     %\subsection{#1 \space #2}
 
     \clearpage % somehow we still need this.
+    \phantomsection
     \nosubsection{#1 \space #2}
   
     \begin{figure}[H]
       \begin{center}
         \makeatletter
-          \includegraphics{\thestring} 
+          % 0.95 stops the blackbeard being on the wrong page
+          \includegraphics[max height=0.95\textheight, max width=0.95\textwidth]{\thestring} 
         \makeatother
         \end{center}
     \end{figure}
