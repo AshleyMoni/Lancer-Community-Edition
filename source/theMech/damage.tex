@@ -1,81 +1,44 @@
 \section{Damage}
- DAMAGE
 
-You want to avoid or mitigate incoming damage as much as possible, but know this: Sometime,
-somewhere, someone is going to punch a few holes in your kit.
+You want to avoid or mitigate incoming damage as much as possible, but know this: Sometime, somewhere, someone is going to punch a few holes in your kit. 
 
+Damage in LANCER comes in three types: \textbf{Explosive}, \textbf{Energy}, and \textbf{Kinetic}, each representing a different type of weaponry or projectile. 
 
-Damage in LANCER comes in three types: Explosive, Energy, and Kinetic, each representing a
-different type of weaponry or projectile.
+\textbf{Armor}, like with pilots, reduces all incoming damage by the amount indicated. Damage with the AP tag ignores armor.\\
+\textbf{Resistance} reduces all incoming damage by 1/2 of a particular type. Mechs can only have resistance once (it doesn’t stack) for a particular type of damage. 
 
+Damage in LANCER resolves as follows:\\ 
+1. Reductions from armor\\
+2. Reductions from systems, talents, and reactions, such as those that grant \textbf{resistance}. Only one reduction of a type or system can be applied at once.\\
+Remaining damage is dealt to your \textbf{HP}, your \textbf{HIT POINTS}. 
 
-Armor, like with pilots, reduces all incoming damage by the amount indicated. Damage with the
-AP tag ignores armor.
+For example: Your total \textbf{HP} is  \textbf{15}. You take fire from an enemy, who scores a successful hit by beating your mech’s \textbf{Evasion}. You’re dealt \textbf{12} points of kinetic damage. Lucky for you, you have armor installed on your mech, which subtracts \textbf{2} from all incoming damage, reducing the final amount of incoming damage to  \textbf{10}. Your total \textbf{HP} after all modifications to incoming damage have been applied is now \textbf{5}. Take cover!
 
-Resistance reduces all incoming damage by 1/2 of a particular type. Mechs can only have
-resistance once (it doesn’t stack) for a particular type of damage.
-
-
-Damage in LANCER resolves as follows:
-
-             1.  Reductions from armor
-
-             2.  Reductions from systems, talents, and reactions, such as those that grant
-                 resistance. Only one reduction of a type or system can be applied at once.
-
-Remaining damage is dealt to your HP, your HIT POINTS.
-
-
-For example: Your total HP is  15. You take fire from an enemy, who scores a successful hit by
-beating your mech’s Evasion. You’re dealt 12 points of kinetic damage. Lucky for you, you have
-armor installed on your mech, which subtracts 2 from all incoming damage, reducing the final
-amount of incoming damage to  10. Your total HP after all modifications to incoming damage
-have been applied is now 5. Take cover!
-
-                                               Heat and Burn
+\begin{center}
+  \textbf{Heat and Burn}
+\end{center}
 
 Some weapons also deal Heat or Burn.
-
-    -    Heat is not affected by armor, though it can be affected by resistance. It fills up a mech’s
-         heat capacity (see the section below)
-
-    -    Mechs affected by Burn immediately take damage equal to the burn they just took,
-         ignoring armor. At the end of their turn, a mech can make an engineering check. On
-        success, they clear all Burn on themselves, on failure, they take damage equal to their
-        current Burn. Burn can stack with itself (so being hit by Burn 3 twice would increase it to
-         Burn 6). Burn is its own damage type.
-
+\begin{itemize}
+\item Heat is not affected by armor, though it can be affected by resistance. It fills up a mech’s heat capacity (see the section below) 
+\item Mechs affected by Burn immediately take damage equal to the burn they just took, ignoring armor. At the end of their turn, a mech can make an engineering check. On success, they clear all Burn on themselves, on failure, they take damage equal to their current Burn. Burn can stack with itself (so being hit by Burn 3 twice would increase it to Burn 6). Burn is its own damage type.
+\end{itemize}
+  
 \subsection{Structure}
-                                                Structure
 
-If your mech is ever reduced to 0 HP, unlike a pilot, you are not down and out. Your mech is a
-powerful machine that can take multiple hits before it starts to be break down. This is
-represented by structure. Player mechs have 4 structure, NPC mechs might have less.
+If your mech is ever reduced to 0 HP, unlike a pilot, you are not down and out. Your mech is a powerful machine that can take multiple hits before it starts to be break down. This is represented by \textbf{structure}. Player mechs have \textbf{4 structure}, NPC mechs might have less. 
 
+When a mech or other actor with structure is reduced to 0 HP, it takes 1 \textbf{structure damage}, makes a \textbf{structure check}, then resets its HP to full. It then takes any damage that ‘spills over’ (this could cause it to lose multiple points of structure and make multiple structure checks in a turn). Structure damage represents major damage to your mech or its systems. 
 
-
-
-
-When a mech or other actor with structure is reduced to 0 HP, it takes 1 structure damage,
-makes a structure check, then resets its HP to full. It then takes any damage that ‘spills
-over’ (this could cause it to lose multiple points of structure and make multiple structure checks
-in a turn). Structure damage represents major damage to your mech or its systems.
-
-
-If your mech takes its last point of structure damage and checks its last box, it goes into the
-CRITICAL state (see below). This is a state in which your mech is so heavily damaged that it
-begins falling apart with every hit. NPCs that run out of structure typically are destroyed.
+If your mech takes its last point of structure damage and checks its last box, it goes into the CRITICAL state (see below). This is a state in which your mech is so heavily damaged that it begins falling apart with every hit. NPCs that run out of structure typically are destroyed.
 
 \subsubsection{Structure Damage}
-                                        STRUCTURE DAMAGE
-When your mech is reduced to 0 HP or when it takes any damage in the CRITICAL state, you roll
-on the structure damage chart. Structure damage represents the results of unusually powerful or
-accurate hits, which can disable a mech rapidly if not dealt with. When you make a structure
-check, roll 1d6 per point of structure damage you have marked. When rolling multiple dice,
-choose the lowest result, though certain outcomes activate if you also roll multiples 1s.
 
+When your mech is reduced to 0 HP or when it takes any damage in the CRITICAL state, you roll on the structure damage chart. Structure damage represents the results of unusually powerful or accurate hits, which can disable a mech rapidly if not dealt with. When you make a structure check, roll \textbf{1d6 per point of structure damage you have marked}. When rolling multiple dice, choose the lowest result, though certain outcomes activate if you also roll multiples 1s. 
 
-                                            STRUCTURE DAMAGE
+\begin{center}
+  \textbf{STRUCTURE DAMAGE}
+\end{center}
 
  ROLL            RESULT                   EFFECT
 
@@ -99,48 +62,28 @@ choose the lowest result, though certain outcomes activate if you also roll mult
  Two or          CRUSHING HIT             Your mech is damaged beyond repair and is destroyed. You can
  more 1s                                  still exit it as normal.
 
-                                              The CRITICAL state
+ \begin{center}
+   \textbf{The CRITICAL state}
+ \end{center}
 
-
-When your mech ticks off its last point of structure (typically 4), it immediately enters the
-CRITICAL state, remaining at 0 hp. While CRITICAL:
-
-             -    Your mech cannot repair or gain Hit Points.
-
-             -    When you take damage, you make a structure check.
-
-This allows a mech to stay fighting at great personal risk to the pilot. A mech can exit the
-CRITICAL state only by resting or taking a full repair. When a mech exits the CRITICAL state it
-returns to 1 HP.
+When your mech ticks off its last point of structure (typically 4), it immediately enters the CRITICAL state, remaining at 0 hp. While CRITICAL:
+\begin{itemize}
+\item Your mech cannot repair or gain Hit Points. 
+\item When you take damage, you make a structure check.
+\end{itemize}  
+This allows a mech to stay fighting at great personal risk to the pilot. A mech can exit the CRITICAL state only by resting or taking a full repair. When a mech exits the CRITICAL state it returns to 1 HP.
 
 \subsection{Heat and Overheating}
 
-  HEAT \& OVERHEATING
+Heat represents the stress of combat on a mech’s electronic systems and mechanical components. Generally a mech is equipped with heat sinks, shunts, and coolant systems and to operate within factory defined standards without generating heat. However, combat and activated abilities can tax your mech’s heat dispersal systems to the point of causing actual damage. Electronic warfare attacks, environmental hazards, weaponry, and overcharging can all cause heat buildup. 
 
-Heat represents the stress of combat on a mech’s electronic systems and mechanical
-components. Generally a mech is equipped with heat sinks, shunts, and coolant systems and to
-operate within factory defined standards without generating heat. However, combat and
-activated abilities can tax your mech’s heat dispersal systems to the point of causing actual
-damage. Electronic warfare attacks, environmental hazards, weaponry, and overcharging can all
-cause heat buildup.
+Each Mech has a \textbf{Heat Capacity} that determines how much heat they can handle without things getting dangerous. It can be increased through certain systems and by improving a mech’s engineering score. A mech with a negative bonus to heat capacity has less than a mech with no bonus. A mech reactor also can take a certain amount of \textbf{stress} before its reactor core is breached and it starts to completely melt down. Most mechs have 4. 
 
+When a mech takes Heat, mark it off. If you gain heat that puts you up to your heat capacity or over, check \textbf{1 reactor stress}, then make an \textbf{overheating check} on the OVERHEATING chart by rolling 1d6 per point of stress you have. If rolling multiple dice, choose the lowest result. Then your mech fully cools, erasing all heat from the heat gauge. You take any heat that ‘spills over’ to your gauge again. This could cause you to overheat more than once. 
 
-Each Mech has a Heat Capacity that determines how much heat they can handle without things
-getting dangerous. It can be increased through certain systems and by improving a mech’s
-engineering score. A mech with a negative bonus to heat capacity has less than a mech with no
-bonus. A mech reactor also can take a certain amount of stress before its reactor core is
-breached and it starts to completely melt down. Most mechs have 4.
-
-
-When a mech takes Heat, mark it off. If you gain heat that puts you up to your heat capacity or
-over, check 1 reactor stress, then make an overheating check on the OVERHEATING chart by
-rolling 1d6 per point of stress you have. If rolling multiple dice, choose the lowest result. Then
-your mech fully cools, erasing all heat from the heat gauge. You take any heat that ‘spills over’ to
-your gauge again. This could cause you to overheat more than once.
-
-
-                                                OVERHEATING
-
+\begin{center}
+  \textbf{OVERHEATING}
+\end{center}
 
  ROLL       RESULT                  EFFECT
 
@@ -164,178 +107,101 @@ your gauge again. This could cause you to overheat more than once.
  Two 1s     IRREVERSIBLE            Your reactor goes critical. Your mech will suffer a reactor meltdown at
             MELTDOWN                the end of your next turn.
 
-                                               COOLING HEAT
+\begin{center}
+  \textbf{COOLING HEAT}
+\end{center}
 
+You can reset your heat gauge by taking the Stabilize action in combat or using other systems. You also automatically cool heat when you rest or full repair. Whenever you cool heat, your gauge resets, clearing all heat. 
 
+\begin{center}
+  \textbf{The DANGER ZONE}
+\end{center}
 
+When a mech has 1/2 of its total heat capacity filled, it’s in the danger zone. Certain mech weapons and talents only activate in this area. While a mech is in this zone, it’s visible - parts of your mech will be glowing, smoking, or steaming. Reactor vents or other cooling mechanisms might be visible hot or working overtime. 
 
-You can reset your heat gauge by taking the Stabilize action in combat or using other systems.
-You also automatically cool heat when you rest or full repair. Whenever you cool heat, your gauge
-resets, clearing all heat.
+\begin{center}
+  \textbf{CORE BREACH}
+\end{center}
 
-
-                                            The DANGER ZONE
-
-When a mech has 1/2 of its total heat capacity filled, it’s in the danger zone. Certain mech
-weapons and talents only activate in this area. While a mech is in this zone, it’s visible - parts of
-your mech will be glowing, smoking, or steaming. Reactor vents or other cooling mechanisms
-might be visible hot or working overtime.
-
-
-                                              CORE BREACH
-
-If you check your last (typically 4th) stress box, your mech enters the CORE BREACH state. In
-this state your gauge does not reset, you can no longer cool, and whenever your mech takes
-heat, it makes an overheating check. You can exit this state by resting or taking a full repair.
+If you check your last (typically 4th) stress box, your mech enters the CORE BREACH state. In this state your gauge does not reset, you can no longer cool, and whenever your mech takes heat, it makes an overheating check. You can exit this state by resting or taking a full repair.
 
 \subsubsection{Reactor Meltdown}
 
-                                      REACTOR MELTDOWN
-
-Certain critical and overheating table results can cause a reactor meltdown. This can be
-immediate, or involve a countdown (in which case update the countdown at the start of the
-round. The meltdown triggers when specified). When a mech suffers a reactor meltdown, any
-pilot inside immediately dies, the mech is immediately vaporized in a catastrophic eruption (it
-becomes completely unrepairable), and any mechs inside a burst 2 area centered on the mech
-must pass an agility skill check or take 4d6 explosive damage, and half on a successful save.
-
+Certain critical and overheating table results can cause a reactor meltdown. This can be immediate, or involve a countdown (in which case update the countdown at the start of the round. The meltdown triggers when specified). When a mech suffers a reactor meltdown, any pilot inside immediately dies, the mech is immediately vaporized in a catastrophic eruption (it becomes completely unrepairable), and any mechs inside a burst 2 area centered on the mech must pass an agility skill check or take 4d6 explosive damage, and half on a successful save. 
 
 \subsection{Repair}
 
-                                               REPAIR
+A \textbf{Repair} is in or out of combat healing to your mech. Repairs represent the resilience of your mech and its ability to continue functioning while damaged, as well as physical assets such as parts or tools. You can spend a repair by taking the \textbf{Stabilize} action in combat, repairing your mech during a rest, or using systems that allow you to repair. 
 
-A Repair is in or out of combat healing to your mech. Repairs represent the resilience of your
-mech and its ability to continue functioning while damaged, as well as physical assets such as
-parts or tools. You can spend a repair by taking the Stabilize action in combat, repairing your
-mech during a rest, or using systems that allow you to repair.
+\textbf{In combat}, you can spend 1 repair as part of \textbf{Stabilize} to heal your mech to full HP.
 
+\textbf{During a rest}, your mech cools all heat. You can then spend any number of repairs. 1 repair can:
+\begin{itemize}
+\item Refill HP to maximum 
+\item Repair a destroyed weapon or system. 
+\end{itemize}  
+4 repairs can be spent to repair a destroyed mech (during a rest only, see below) 
 
-In combat, you can spend 1 repair as part of Stabilize to heal your mech to full HP.
+A pilot’s \textbf{Repair Capacity} is equal to 4+ HULL. This indicates the number of repairs a pilot can make before returning to base - so if a mech’s repair capacity is 8, it can only spend 8 repairs before taking a full repair. If a pilot has no repairs left, they cannot repair their mech! This capacity refreshes to full when a pilot takes a full repair. 
 
+\begin{center}
+  \textbf{DESTROYED}
+\end{center}
 
-During a rest, your mech cools all heat. You can then spend any number of repairs. 1 repair can:
-
-    -    Refill HP to maximum
-
-    -    Repair a destroyed weapon or system.
-
-4 repairs can be spent to repair a destroyed mech (during a rest only, see below)
-
-
-A pilot’s Repair Capacity is equal to 4+ HULL. This indicates the number of repairs a pilot can
-make before returning to base - so if a mech’s repair capacity is 8, it can only spend 8 repairs
-before taking a full repair. If a pilot has no repairs left, they cannot repair their mech! This
-capacity refreshes to full when a pilot takes a full repair.
-
-
-                                                 DESTROYED
-
-When destroyed, a mech counts as permanently stunned and shut down until it is restored to
-working condition (these conditions cannot be removed in any way). It then becomes an object
-on the battlefield and provides cover accordingly. The wreck can be moved and dragged around.
+When destroyed, a mech counts as permanently stunned and shut down until it is restored to working condition (these conditions cannot be removed in any way). It then becomes an object on the battlefield and provides cover accordingly. The wreck can be moved and dragged around.
 
 \subsubsection{Repairing a Destroyed Mech}
-                                  Repairing a Destroyed Mech
 
-If a mech is destroyed and the wreck is present (not melted in a reactor explosion, for example), it
-can be repaired to working order by spending 4 repairs during a rest. These repairs can be spent
-from the mech’s own pool or the pools of any pilots that wish to contribute, in any combination. If a
-mech has 0 repairs remaining, it can still be repaired if other mechs spend repairs, for example.
-This is unique to repairing a destroyed mech.
+If a mech is destroyed and the wreck is present (not melted in a reactor explosion, for example), it can be repaired to working order by spending 4 repairs during a rest. These repairs can be spent from the mech’s own pool or the pools of any pilots that wish to contribute, in any combination. If a mech has 0 repairs remaining, it can still be repaired if other mechs spend repairs, for example. This is unique to repairing a destroyed mech.
 
-Once repaired, the mech is returned to 1 structure at full HP, no matter how much it had before.
-Any weapons or systems that are destroyed remain so unless that mech spends its own repairs to
-fix them.
+Once repaired, the mech is returned to 1 structure at full HP, no matter how much it had before. Any weapons or systems that are destroyed remain so unless that mech spends its own repairs to fix them.
+
 \subsubsection{Full Repair}
-                                                Full Repair
 
-If you take at least 10 hours of downtime in a secure location, you can Full repair. You can
-repair all damage on your mech unless it is completely destroyed, returning it to full HP and
-
-
-
-
-clearing all stress and structure (you can also repair destroyed systems). Your repair cap
-refreshes to full, your pilot heals to full (or returns from being down and out), you can reset
-your CRITICAL and heat gauges, and end all statuses other than destroyed (including
-CRITICAL and CORE BREACH). You also regain core power if you lost it and get back all
-(limited) use weapons, that you checked off.
+If you take at least \textbf{10 hours of downtime in a secure location}, you can \textbf{Full repair}. You can \textbf{repair all damage} on your mech unless it is completely destroyed, returning it to full HP and clearing all stress and structure (you can also repair destroyed systems). Your \textbf{repair cap refreshes} to full, your \textbf{pilot heals to full} (or returns from being down and out), you can \textbf{reset your CRITICAL and heat gauges}, and \textbf{end all statuses} other than destroyed (including CRITICAL and CORE BREACH). You also \textbf{regain core power} if you lost it and \textbf{get back all (limited) use weapons}, that you checked off.
 
 \subsubsection{Printing}
-                                                   Printing
 
-If your mech is destroyed, even if you don’t have the wreck with you, you can rebuild it during a
-full repair as long as you have access to the proper facilities. Mechs can be printed whole-cloth
-from enormous Union printing facilities, which are generally ubiquitous across civilization. A
-printer and assembler will perfectly recreate any mech or gear you have licenses for. If you need
-to work on a destroyed mech and don’t have a printer, it’s also possible to repair it during a full
-repair without a printer, but you need the wreck.
+If your mech is destroyed, even if you don’t have the wreck with you, you can rebuild it during a full repair as long as you have access to the proper facilities. Mechs can be printed whole-cloth from enormous Union printing facilities, which are generally ubiquitous across civilization. A printer and assembler will perfectly recreate any mech or gear you have licenses for. If you need to work on a destroyed mech and don’t have a printer, it’s also possible to repair it during a full repair without a printer, but you need the wreck. 
 
+\begin{center}
+  \textit{One At a Time, Please}
+\end{center}
 
-                                            One At a Time, Please
-
-You’re only licensed to print a single active mech at a time. Only the newest mech you printed
-will function (any others repaired, etc will cease to function).
+You’re only licensed to print a single active mech at a time. Only the newest mech you printed will function (any others repaired, etc will cease to function).
 
 \subsubsection{Rests}
-                                                     Rests
 
-A rest is defined as at least 1 hour of uninterrupted downtime or light activity (making camp,
-routine maintenance, for example). After a rest, as long as you took action to do so:
-
-             -   Cool heat
-             -    Heal 1/2 your pilot HP or return from being down and out
-
-             -    Exit the CRITICAL or CORE BREACH state if you’re in it and return to 1 HP and
-                 clear 1 heat.
-             -   You can spend any number of repairs to repair your mech, as long as you don’t
-                 spend over your repair cap. You can also repair a destroyed mech.
-             -   You can end any statuses currently affecting your mech automatically.
-
+A \textbf{rest} is defined as at least 1 hour of uninterrupted downtime or light activity (making camp, routine maintenance, for example). After a rest, as long as you took action to do so: 
+\begin{itemize}
+\item Cool heat
+\item Heal 1/2 your pilot HP or return from being down and out 
+\item Exit the CRITICAL or CORE BREACH state if you’re in it and return to 1 HP and clear 1 heat.
+\item You can \textbf{spend any number of repairs} to repair your mech, as long as you don’t spend over your repair cap. You can also repair a \textbf{destroyed} mech.
+\item You can end any \textbf{statuses} currently affecting your mech automatically.
+\end{itemize}
 
 \subsection{Death}
-  DEATH
 
-The destruction of a mech does not always mean the death of a pilot. Pilots can escape and exit
-from shutdown, disabled, or even destroyed mechs, presuming they survived. A pilot can always
-re-create a mech - the pilot is much harder.
+The destruction of a mech does not always mean the death of a pilot. Pilots can escape and exit from shutdown, disabled, or even destroyed mechs, presuming they survived. A pilot can always re-create a mech - the pilot is much harder.
 
 \subsubsection{Cloning}
-                                                  CLONING
 
-Pilots are tremendous investments in hardware and training and tend to have powerful and well-
-connected patrons. It should not be surprising, then, that the technologies to resuscitate dead
-flesh or create imperfect, flash-grown genetic clones of pilots, though often illegal or highly
-secretive, do exist, and are often utilized by powerful organizations who don’t wish to give up on
-their investments.
+Pilots are tremendous investments in hardware and training and tend to have powerful and well- connected patrons. It should not be surprising, then, that the technologies to resuscitate dead flesh or create imperfect, flash-grown genetic clones of pilots, though often illegal or highly secretive, do exist, and are often utilized by powerful organizations who don’t wish to give up on their investments. 
 
+Cloning or revivification is a costly and dangerous process. It’s always up to the player whether they want to bring a character back or simply make a new one. Flash-cloning or revivification is an experimental process that always creates complications. These caveats are here by default, and can be tweaked by the GM at their discretion: 
+\begin{itemize}
+\item A cloned or revived character can only re-join the party after a mission’s completion. 
+\item A cloned or revived character knows and learns nothing of the mission that they died on 
+\item A cloned or revived character always comes back with a Quirk. 
+\begin{itemize}
+\item The quirk could be physical or mental in nature, but whatever the quirk is, it should be a story hook or something narrative in design (it shouldn’t have any major gameplay effects). 
+\item Quirks are always complicating - though your character might adjust to them in time, they are a shock to the system.
+\end{itemize}
+\item If a cloned or revived character would be cloned or revived a second time, they can no longer be played as a player character. The trauma and personality shift from being brought back to life is too great. In other words, you’re one and done.
+\end{itemize}
 
-Cloning or revivification is a costly and dangerous process. It’s always up to the player whether
-they want to bring a character back or simply make a new one. Flash-cloning or revivification
-is an experimental process that always creates complications. These caveats are here by
-default, and can be tweaked by the GM at their discretion:
-
-
-    -    A cloned or revived character can only re-join the party after a mission’s completion.
-
-    -    A cloned or revived character knows and learns nothing of the mission that they died on
-
-    -    A cloned or revived character always comes back with a Quirk.
-
-             -   The quirk could be physical or mental in nature, but whatever the quirk is, it
-                 should be a story hook or something narrative in design (it shouldn’t have any
-                 major gameplay effects).
-
-             -   Quirks are always complicating - though your character might adjust to them in
-                 time, they are a shock to the system.
-    -    If a cloned or revived character would be cloned or revived a second time, they can no
-         longer be played as a player character. The trauma and personality shift from being
-         brought back to life is too great. In other words, you’re one and done.
-
-
-If you want to roll for a random Quirk, you can roll 1d20 or choose from the below chart. You can
-use these as examples for your own quirks and are free to figure out between you and your GM
-what quirk your pilot comes back with.
+If you want to roll for a random Quirk, you can roll 1d20 or choose from the below chart. You can use these as examples for your own quirks and are free to figure out between you and your GM what quirk your pilot comes back with.
 
 
                                                  Random Quirk
