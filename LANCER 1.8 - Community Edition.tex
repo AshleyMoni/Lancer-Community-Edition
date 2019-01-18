@@ -18,6 +18,8 @@
 \usepackage{xstring}
 \usepackage{catchfile}
 \usepackage{titlesec}
+\usepackage{float}
+\usepackage{stringstrings}
 %\usepackage{gitinfo2}
 
 % --------------------------
@@ -83,6 +85,16 @@
   \small \itshape}
 {\end{varwidth}
 \end{center}}
+
+% % TODO: move to sty defined in another PR
+% \newcommand{\mechsection}[2]{%
+%   \subsection{#1}
+%   \begin{figure}[H]
+%     \begin{center}
+%         \includegraphics{#2}
+%     \end{center}
+%   \end{figure}
+% }
 
 \titleformat
 {\chapter} % command

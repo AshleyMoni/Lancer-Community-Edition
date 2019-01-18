@@ -1,16 +1,55 @@
 \usepackage{enumerate}
 \usepackage{pgfkeys}
-\usepackage{xcolor,colortbl,longtable,float,supertabular}
+\usepackage{xcolor,colortbl,longtable,float,supertabular,stringstrings}
 
 \providecommand{\fluff}[1]{{\itshape #1}}
 
 \providecommand\corpName{}
 \providecommand\mechName{}
+
+\newcommand{\nosubsection}[1]{%
+  \refstepcounter{subsection}%
+  \addcontentsline{toc}{subsection}{\protect\numberline{\thesubsection}#1}%
+  \markright{#1}}
+
+
 \newenvironment{mech}[2]
 {
   \renewcommand{\corpName}{#1}
   \renewcommand{\mechName}{#2}
-  \corpName \space \mechName \\
+  % \corpName \space \mechName \\
+
+
+
+  % remove spaces and punutation from argument, to translate mech name to filename
+  % goddamn this is ugly though. http://mirror.las.iastate.edu/tex-archive/macros/latex/contrib/stringstrings/stringstrings.pdf for details
+  \Treatments{1}{1}{0}{0}{0}{0}
+  \substring[q]{#2}{1}{20}
+
+  \IfFileExists{images/\thestring.png}{
+    % If we have an image, skip the text title because the image already contains it, then load the image
+    % The images are all large enough, with the floating H option, to force a newpage
+    %\subsection{#1 \space #2}
+
+
+    \nosubsection{#1 \space #2}
+  
+    \begin{figure}[H]
+      \begin{center}
+        \makeatletter
+          \includegraphics{\thestring} 
+        \makeatother
+        \end{center}
+    \end{figure}
+
+  }{
+    % If we can't find an image, clear the page and generate a subsection title 
+    \clearpage
+    \subsection{#1 \space #2}
+
+  }
+
+  
 }
 {}
 
