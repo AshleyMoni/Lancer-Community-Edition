@@ -1,7 +1,12 @@
 \newpage
-\chapter{\texorpdfstring{\hrule A GOLDEN AGE, OF A KIND: HUMANITY UNDER UNION, 5016 \vspace{0.5cm} \hrule}{Lore}}
-\newpage
+\begingroup
+\titleformat{\chapter}[display]
+{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge\center\titlerule}[\vspace{1ex}\titlerule]
+\chapter[Lore]{\texorpdfstring{A GOLDEN AGE, OF A KIND: HUMANITY UNDER UNION, 5016}{Lore}}
 
+
+\newpage
+\endgroup
 \subimport{./lore/}{humanity}
 \subimport{./lore/}{pilots}
 \subimport{./lore/}{colony}
