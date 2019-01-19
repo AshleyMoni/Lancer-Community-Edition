@@ -35,52 +35,48 @@ core active text = {\QuickAction,
 You ignore the next overheating check you make this challenge. When you would overheat, clear your heat from your gauge as normal, but ignore the check (you don’t take stress either). You vent an enormous cloud of burning matter from your mech, creating a burst 3 area centered on your mech. Inside the area, all targets (allied and enemy) count as invisible to everyone except you, and all mechs other than you that enter the area for the first time on their turn or start their turn there take 2 Burn and 2 heat.
 On the following round, the benefit from the area reduces to heavy cover (which you ignore). On the round after that, it reduces to light cover. On the round after that round, the zone disperses.}]
 
-Flamethrower
+\gearBox
+[name = {Flamethrower},
+fluff = {The HA Krakatoa was developed specifically for the Hercynian crisis, as chassis-size flamethrowers had been deemed unnecessary, and more to the point, banned by anti-terror conventions. With the combination of thick arboreal environment, swarm tactics of the Egregorians, and ineffectual performance of slug ammunition, the need for a recession on the ban was apparent. The Krakatoa was quickly developed and affiliate patterns disseminated. Adopted by Union MEF units, the Krakatoa saw heavy use in the deep world-jungle of Hercynia and towering hives of the Egregorians thanks to its stability, intensity, and stopping power — a necessary feature competitor makes lacked. Egregorian drones and warriors, commanded by their overminds, would not stop advancing until they were physically incapable of doing so — the force at which the Krakatoa expelled flame and fuel was sufficient to knock back or otherwise incapacitate charging warriors on the periphery of the flame cone. Reworked after the cessation of the Hercynian crisis, the Krakatoa is now a popular tool for creating area-of-denial firebreaks. It’s legality is currently under review by the Galactic Treaties Board.},
+template= {\Heavy \CQB\\
+\Cone{5}, \\
+\Burn{4} + \HeatTarget{1}]
 
-The HA Krakatoa was developed specifically for the Hercynian crisis, as chassis-size flamethrowers had been deemed unnecessary, and more to the point, banned by anti-terror conventions. With the combination of thick arboreal environment, swarm tactics of the Egregorians, and ineffectual performance of slug ammunition, the need for a recession on the ban was apparent. The Krakatoa was quickly developed and affiliate patterns disseminated. Adopted by Union MEF units, the Krakatoa saw heavy use in the deep world-jungle of Hercynia and towering hives of the Egregorians thanks to its stability, intensity, and stopping power — a necessary feature competitor makes lacked. Egregorian drones and warriors, commanded by their overminds, would not stop advancing until they were physically incapable of doing so — the force at which the Krakatoa expelled flame and fuel was sufficient to knock back or otherwise incapacitate charging warriors on the periphery of the flame cone. Reworked after the cessation of the Hercynian crisis, the Krakatoa is now a popular tool for creating area-of-denial firebreaks. It’s legality is currently under review by the Galactic Treaties Board.
+\gearBox
+[name = {Explosive Vent},
 
-Heavy CQB
-Cone 5
-Burn 4 + Heat 1
+fluff = {Less a technology and more of a tactic, explosive venting is an unsanctioned, unsafe method of sudden cooling that dumps excess heat into the surrounding area immediately around the chassis.},
+template = {2 SP, \Unique\\
+\System},
+rules = {When you cool heat, you explosively vent heat in a \Burst{1} area around you. Affected targets, friend or foe, take \HeatTarget{1d3} and \Burn.}]
 
-Explosive Vent
-
-Less a technology and more of a tactic, explosive venting is an unsanctioned, unsafe method of sudden cooling that dumps excess heat into the surrounding area immediately around the chassis.
-
-2 SP, Unique
-System
-
-When you cool heat, you explosively vent heat in a burst 1 area around you. Affected targets, friend or foe, take 1d3 heat and burn.
-
-
-Auto-Cooler
-
-An HA-designed automatic cooler is a simple, sturdy persistent system that helps pilots mitigate damaging heat generation.
-
-2 SP, Unique, Protocol
-Activate this cooler as a free action at the start of your turn. If you don’t take damage, move, or overheat before the start of your next turn, cool your mech at the start of your next turn.
+\gearBox
+[name = {Auto-Cooler},
+fluff = {An HA-designed automatic cooler is a simple, sturdy persistent system that helps pilots mitigate damaging heat generation.},
+template = {2 SP, \Unique, \Protocol},
+rules = {Activate this cooler as a free action at the start of your turn. If you don’t take damage, move, or overheat before the start of your next turn, cool your mech at the start of your next turn.}]
 
 
-HAVOK Mine
-FOR USE IN: Urban, post-urban, and high-density terrestrial environments. High O2  concentration preferred.
+\gearBox
+[name={HAVOK Mine}
+fluff={FOR USE IN: Urban, post-urban, and high-density terrestrial environments. High O2  concentration preferred.
 
 FOR USE AGAINST: Organic targets preferred. Hardened targets vulnerable to caustic/corrosive degradation preferred. Defoliant. Long-term breach solution.
 
-NOTES: Dispersion is true directional. Dispersion involves aerosolized component -- avoid blue on blue by supplying end-users with proper respiratory equipment (noted on canister).
+NOTES: Dispersion is true directional. Dispersion involves aerosolized component -- avoid blue on blue by supplying end-users with proper respiratory equipment (noted on canister).}
 
-2 SP
-Mine, Limited (2)
-When detonated, this mine attacks a line 5 zone from the mine instead of a burst area around the mine (oriented in any direction). Affected targets must pass an agility check or take 6 Burn or 3 Burn on a successful check.
+template = {2 SP\\
+\Mine, \Limited{2}}
+rules = {When detonated, this mine attacks a \line{5} zone from the mine instead of a burst area around the mine (oriented in any direction). Affected targets must pass an agility check or take \Burn{6} or \Burn{3} on a successful check.}]
 
+\gearRules
+[name = {Plasma Thrower}
+fluff = {The plasma thrower arrived late in the Hercynian Crisis, too late to see widespread battlefield application. Some MEF squadrons were able to mount the superheavy system, and what little data there is to see from its use suggests that this system would have had a tremendous impact during the major battles that raged in the deep jungles during the middle of the Crisis.}
 
-Plasma Thrower
-
-The plasma thrower arrived late in the Hercynian Crisis, too late to see widespread battlefield application. Some MEF squadrons were able to mount the superheavy system, and what little data there is to see from its use suggests that this system would have had a tremendous impact during the major battles that raged in the deep jungles during the middle of the Crisis.
-
-Superheavy CQB
-4 heat (self)
-Cone 7
-Burn 5 + 1d6 heat
+template = {\Superheavy \CQB \\
+\HeatSelf{4}
+\Cone{7}
+\Burn{5} + \HeatTarget{1d6}}
 
 
 AGNI-class NHP
