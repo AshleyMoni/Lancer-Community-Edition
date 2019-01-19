@@ -9,7 +9,7 @@
 \usepackage[svgnames]{xcolor} % https://www.w3.org/TR/SVG11/types.html#ColorKeywords
 \usepackage{lancer}
 \usepackage{parskip}
-\usepackage[Ligatures=TeX]{fontspec}
+\usepackage{fontspec}
 \usepackage{titlesec}
 \usepackage{tabu}
 \usepackage{url}
@@ -20,6 +20,7 @@
 \usepackage{xstring}
 \usepackage{catchfile}
 \usepackage{titlesec}
+\usepackage{enumitem}
 %\usepackage{gitinfo2}
 
 % --------------------------
@@ -49,7 +50,10 @@
 \interfootnotelinepenalty=10000
 \raggedright
 
-\setmainfont{Arial}
+\setmainfont[Ligatures=TeX]{Arial}
+\fontdimen2\font=3pt
+
+\renewcommand{\baselinestretch}{0.9}
 
 \hypersetup{colorlinks=false
   %linkcolor=DarkBlue, % color of internal links (change box color with linkbordercolor)
