@@ -2,7 +2,6 @@
 
 Here’s some good basic rules, terms, and things to keep in mind during a typical session:
 
-
 \begin{center}
      \textbf{Rests and Full Repairs}
 \end{center}
@@ -145,14 +144,14 @@ were pouring in through the breach. Somehow, impossibly, the battle had turned i
 “Good work, Gold squadron. Report back to the waypoint marked on your HUD. Your job is done
 for the day: all scenario probabilities report total success from this point on.”}
 
-\textbf{4. Grant Skill Points}
+\textbf{3. Grant Skill Points}
 
 You can directly grant players pilot skill points to spend on pilot skills (+2 at a time). A player that
 has been learning to pilot a starship could easily be rewarded +2 to Get Somewhere Fast after a
 mission to represent their diligence and study. Doing so increases player power levels, so use
 this reward carefully.
 
-\textbf{5. Reward a Unique or Restricted system or weapon}
+\textbf{4. Reward a Unique or Restricted system or weapon}
 
 Rewarding your players with items that are unique, exotic, or otherwise restricted from their usual
 requisition pool is the closest thing in Lancer to magical or wondrous items typically found in
@@ -180,7 +179,7 @@ voice. The ship’s head engineer steps forward and presses his personal slate i
 You scroll through the list, previously locked licenses unlocked and waiting your requisition. The
 fatigue disappears, replaced only by excitement…}
 
-\textbf{6. Grant Exotic Tech}
+\textbf{5. Grant \hypertarget{Exotic}{Exotic} Tech}
 
 Drawing up exotic or truly unique systems or weapons is a bit more of a process. We
 recommend adapting your \textbf{exotic} system or weapon to the narrative you’re running. We will
@@ -198,7 +197,7 @@ them more license or talent points.
 It follows the following rules and conventions:
 \begin{itemize}
 \item[--]Installing or uninstalling a system or weapon with the Exotic tag requires you take a full repair
-\item[--]Exotic tech is typically more powerful than comparable tech
+\item[--]\Exotic tech is typically more powerful than comparable tech
 \item[--]A weapon or system with the exotic tag \textbf{cannot be re-printed} with your mech should it be destroyed, but must be physically re-acquired
 \end{itemize}
 
@@ -206,37 +205,23 @@ Here’s a couple examples of Exotic tech for your use. We’ll include a short 
 update. These are not particularly balanced in any way, but might give you a general idea of what
 to look for.
 
+\gearBox
+[name = {Miniaturized Nuclear Missile},
+fluff = {Your mech is equipped with the latest in thermonuclear technology, typically reserved for ship-to-ship combat.},
+template = {\Superheavy \Exotic \Launcher \\
+Range 50 \\
+\Limited{1} \\
+\Blast{20} \\
+10d6 \explosive damage + 10 heat},
+rules = {Mechs caught in a \Blast{40} zone centered on the impact point must pass a systems skill check
+with 2 \Difficulty or be immediately shut down. This missile can never be replenished once used.}]
 
-Miniaturized Nuclear Missile
-Your mech is equipped with the latest in thermonuclear technology, typically reserved for ship-to-
-ship combat.
-
-Superheavy Exotic Launcher
-
-Range 50
-
-Limited (1)
-
-Blast 20
-
-10d6 explosive damage + 10 heat
-
-
-Mechs caught in a blast 40 zone centered on the impact point must pass a systems skill check
-with 2 Difficulty or be immediately shut down. This missile can never be replenished once used.
-
-
-Living Metal
-Your mech has partly biological components of alien origin that automatically crawl over damaged
-parts of your mech and knit them back together, wire by wire.
-
-2 SP
-
-Exotic, Unique, Biological
-
-Your repair cap increases by 4. Each round, you may spend 1 repair once to heal as an end-of-
-round action.
-
+\gearBox
+[name = {Living Metal},
+fluff = {Your mech has partly biological components of alien origin that automatically crawl over damaged parts of your mech and knit them back together, wire by wire.},
+template = {2 SP \\
+\Unique, Biological, \Exotic},
+rules = {Your repair cap increases by 4. Each round, you may spend 1 repair once to heal as an end-of-round action.}]
 
 \fluff{The Chosen of Aun fell, its golden chassis trailing a greasy pall of smoke from its shattered
 cockpit.
@@ -267,7 +252,7 @@ keep it.
 
 But what does it do?...}
 
-\textbf{7. Reward Talent Points}
+\textbf{6. Reward Talent Points}
 
 Talent points can be directly awarded to players (as they are not necessarily locked to level) and
 spent as normal. The world of LANCER grants easy explanation for this sudden burst of
@@ -276,4 +261,3 @@ from military and civilian sources.
 
 Granting players increased numbers of talent points can be very powerful, so you should use this
 option sparingly.
-
