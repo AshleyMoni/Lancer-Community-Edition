@@ -46,13 +46,12 @@ The GENGHIS is a unique Harrison Armory chassis, developed to fill a niche speci
     }
 ]
 
-\gearBox
-[name = {Explosive Vent},
-
-fluff = {Less a technology and more of a tactic, explosive venting is an unsanctioned, unsafe method of sudden cooling that dumps excess heat into the surrounding area immediately around the chassis.},
-template = {2 SP, \Unique\\
-\System},
-rules = {When you cool heat, you explosively vent heat in a \Burst{1} area around you. Affected targets, friend or foe, take \HeatTarget{1d3} and \Burn.}]
+\gearBox[name = {Explosive Vent},
+    fluff = {Less a technology and more of a tactic, explosive venting is an unsanctioned, unsafe method of sudden cooling that dumps excess heat into the surrounding area immediately around the chassis.},
+    template = {2 SP, \Unique\\
+    \System},
+    rules = {When you cool heat, you explosively vent heat in a \Burst{1} area around you. Affected targets, friend or foe, take \HeatTarget{1d3} and \Burn.}
+]
 
 \gearBox
 [name = {Auto-Cooler},
@@ -74,8 +73,7 @@ template = {2 SP\\
 rules = {When detonated, this mine attacks a \line{5} zone from the mine instead of a burst area around the mine (oriented in any direction). Affected targets must pass an agility check or take \Burn{6} or \Burn{3} on a successful check.}
 ]
 
-\gearRules
-[name = {Plasma Thrower}
+\gearRules[name = {Plasma Thrower}
 fluff = {The plasma thrower arrived late in the Hercynian Crisis, too late to see widespread battlefield application. Some MEF squadrons were able to mount the superheavy system, and what little data there is to see from its use suggests that this system would have had a tremendous impact during the major battles that raged in the deep jungles during the middle of the Crisis.}
 
 template = {\Superheavy \CQB \\
@@ -83,22 +81,21 @@ template = {\Superheavy \CQB \\
 \Cone{7}
 \Burn{5} + \HeatTarget{1d6}}
 
-\gearBox
-[name = {AGNI-class NHP},
+\gearBox[name = {AGNI-class NHP},
 
 fluff = {AGNI was developed from the aftermath of the Hercynian Crisis using a combination of combat performance data recorded by extant subsentient artificial intelligences (weapons systems, chassis copilots, tactic-minds, general combat data) and the neural network of an Egregorian hivemind captured and vivisected by Union Science Bureau.
 
 Born from trauma, AGNI Prime devised systems of heat management that have since been disseminated throughout core space to ensure unparalleled heat processing, recycling, and shielding. Further developments into radiation shielding, omninet capability, and drone/nanite control are forthcoming; meanwhile, AGNI clones have been optimized for mech chassis core systems.
 
-Pilots report AGNI clones as generally cold and efficient. A low percentage report instances of memory recitation and command rejection, often followed days later by total breakdown through attempted self-emancipation. Pilots are recommended to cycle their AGNI clones at least once every six standard months.},
-
+Pilots report AGNI clones as generally cold and efficient. A low percentage report instances of memory recitation and command rejection, often followed days later by total breakdown through attempted self-emancipation. Pilots are recommended to cycle their AGNI clones at least once every six standard months.
+},
 template = {3 SP, \Unique \\
 \AI},
-
 rules = {Your mech gains the AI property and the AGNI protocol
 AGNI protocol\\
 \Protocol\\
 \Limited{1}\\
 At the end of your turn, you automatically cool, clearing your heat gauge. This vent creates a burst 3 zone around you. All targets within that zone must make an engineering skill check. On a failure, a target takes 2 Burn and is pushed outside the zone (or as far as possible). This area provides light cover until the end of your next turn.\\
-This protocol can only be activated once per scene.}]
+This protocol can only be activated once per scene.}
+]
 \end{mech}
