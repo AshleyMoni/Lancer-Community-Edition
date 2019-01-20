@@ -2,8 +2,7 @@
 
 \begin{mech}{HA}{Genghis}
 
-\fluff{
-The GENGHIS is a unique Harrison Armory chassis, developed to fill a niche specialist role during the Hercynia crisis. Due to the unique nature of the Egregorians, a total-biome-kill system was necessary to ensure localized threat neutralization while keeping Hercynia habitable for future colonists. Thus, the GENGHIS chassis was developed. Fielding a suite of TBK systems and weapons, GENGHIS squadrons were dispatched by Union MEF-105 to identify and strike the Egregorian hives. The campaign was a success, and Hercynia is currently undergoing rehabilitation and repopulation in approved settlement areas.}
+\fluff{The GENGHIS is a unique Harrison Armory chassis, developed to fill a niche specialist role during the Hercynia crisis. Due to the unique nature of the Egregorians, a total-biome-kill system was necessary to ensure localized threat neutralization while keeping Hercynia habitable for future colonists. Thus, the GENGHIS chassis was developed. Fielding a suite of TBK systems and weapons, GENGHIS squadrons were dispatched by Union MEF-105 to identify and strike the Egregorian hives. The campaign was a success, and Hercynia is currently undergoing rehabilitation and repopulation in approved settlement areas.}
 
 \begin{license}
 \item Flamethrower, Explosive Vent
@@ -71,9 +70,9 @@ template = {2 SP\\
 rules = {When detonated, this mine attacks a \line{5} zone from the mine instead of a burst area around the mine (oriented in any direction). Affected targets must pass an agility check or take \Burn{6} or \Burn{3} on a successful check.}
 ]
 
-\gearRules[name = {Plasma Thrower}
-fluff = {The plasma thrower arrived late in the Hercynian Crisis, too late to see widespread battlefield application. Some MEF squadrons were able to mount the superheavy system, and what little data there is to see from its use suggests that this system would have had a tremendous impact during the major battles that raged in the deep jungles during the middle of the Crisis.}
-
+\gearBox
+[name = {Plasma Thrower},
+fluff = {The plasma thrower arrived late in the Hercynian Crisis, too late to see widespread battlefield application. Some MEF squadrons were able to mount the superheavy system, and what little data there is to see from its use suggests that this system would have had a tremendous impact during the major battles that raged in the deep jungles during the middle of the Crisis.},
 template = {\Superheavy \CQB \\
 \HeatSelf{4}
 \Cone{7}
@@ -92,6 +91,5 @@ AGNI protocol\\
 \Limited{1}\\
 At the end of your turn, you automatically cool, clearing your heat gauge. This vent creates a burst 3 zone around you. All targets within that zone must make an engineering skill check. On a failure, a target takes 2 Burn and is pushed outside the zone (or as far as possible). This area provides light cover until the end of your next turn. \newline This protocol can only be activated once per scene.}
 ]
-% }]
 
 \end{mech}
