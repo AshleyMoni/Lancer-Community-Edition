@@ -52,15 +52,14 @@ The GENGHIS is a unique Harrison Armory chassis, developed to fill a niche speci
     rules = {When you cool heat, you explosively vent heat in a \Burst{1} area around you. Affected targets, friend or foe, take \HeatTarget{1d3} and \Burn.}
 ]
 
-\gearBox
-[name = {Auto-Cooler},
+\gearBox[name = {Auto-Cooler},
 fluff = {An HA-designed automatic cooler is a simple, sturdy persistent system that helps pilots mitigate damaging heat generation.},
 template = {2 SP, \Unique, \Protocol},
-rules = {Activate this cooler as a free action at the start of your turn. If you don’t take damage, move, or overheat before the start of your next turn, cool your mech at the start of your next turn.}]
+rules = {Activate this cooler as a free action at the start of your turn. If you don’t take damage, move, or overheat before the start of your next turn, cool your mech at the start of your next turn.}
+]
 
 
-\gearBox
-[name={HAVOK Mine}
+\gearBox[name={HAVOK Mine}
 fluff={FOR USE IN: Urban, post-urban, and high-density terrestrial environments. High O2  concentration preferred.
 
 FOR USE AGAINST: Organic targets preferred. Hardened targets vulnerable to caustic/corrosive degradation preferred. Defoliant. Long-term breach solution.
@@ -79,22 +78,20 @@ template = {\Superheavy \CQB \\
 \HeatSelf{4}
 \Cone{7}
 \Burn{5} + \HeatTarget{1d6}}
+]
 
 \gearBox[name = {AGNI-class NHP},
-
 fluff = {AGNI was developed from the aftermath of the Hercynian Crisis using a combination of combat performance data recorded by extant subsentient artificial intelligences (weapons systems, chassis copilots, tactic-minds, general combat data) and the neural network of an Egregorian hivemind captured and vivisected by Union Science Bureau.
-
 Born from trauma, AGNI Prime devised systems of heat management that have since been disseminated throughout core space to ensure unparalleled heat processing, recycling, and shielding. Further developments into radiation shielding, omninet capability, and drone/nanite control are forthcoming; meanwhile, AGNI clones have been optimized for mech chassis core systems.
-
-Pilots report AGNI clones as generally cold and efficient. A low percentage report instances of memory recitation and command rejection, often followed days later by total breakdown through attempted self-emancipation. Pilots are recommended to cycle their AGNI clones at least once every six standard months.
-},
+Pilots report AGNI clones as generally cold and efficient. A low percentage report instances of memory recitation and command rejection, often followed days later by total breakdown through attempted self-emancipation. Pilots are recommended to cycle their AGNI clones at least once every six standard months.},
 template = {3 SP, \Unique \\
 \AI},
 rules = {Your mech gains the AI property and the AGNI protocol
 AGNI protocol\\
 \Protocol\\
 \Limited{1}\\
-At the end of your turn, you automatically cool, clearing your heat gauge. This vent creates a burst 3 zone around you. All targets within that zone must make an engineering skill check. On a failure, a target takes 2 Burn and is pushed outside the zone (or as far as possible). This area provides light cover until the end of your next turn.\\
-This protocol can only be activated once per scene.}
+At the end of your turn, you automatically cool, clearing your heat gauge. This vent creates a burst 3 zone around you. All targets within that zone must make an engineering skill check. On a failure, a target takes 2 Burn and is pushed outside the zone (or as far as possible). This area provides light cover until the end of your next turn. \newline This protocol can only be activated once per scene.}
 ]
+% }]
+
 \end{mech}
