@@ -11,33 +11,33 @@ The GENGHIS is a unique Harrison Armory chassis, developed to fill a niche speci
 \item AGNI Class NHP, Plasma Thrower
 \end{license}
 
-\frameBox
-[hp = 8,
-evasion = 6,
-speed = 3,
-heat cap = 10,
-sensors = 5,
-armor = 3,
-e-defense = 8
-size = 1,
-repair cap = 4,
-tech attack = -2,
-traits ={\textbf{Insulated:} The GENGHIS is immune to Burn
+\frameBox[hp = 8,
+    evasion = 6,
+    speed = 3,
+    heat cap = 10,
+    sensors = 5,
+    armor = 3,
+    e-defense = 8
+    size = 1,
+    repair cap = 4,
+    tech attack = -2,
+    traits ={
+        \textbf{Insulated:} The GENGHIS is immune to Burn
+        \textbf{Emergency Vent:} When the GENGHIS loses a point of structure, it immediately cools and clears its heat gauge.
+    },
+    sp = 5,
+    mount one = flex mount,
+    mount two = heavy mount,
+    core system name = TBK Sustain Suite,
+    core system text = {In order to better manage the tremendous power demands of the GENGHIS platform, HA’s Think Tank developed a suite of power-management protocols to rapidly accelerate heat dispersion. After extensive field testing, pilots discovered that the TBK Sustain Suite can be tuned to be both a heat sink and a area-denial weapon.},
+    core active name = Expose Power Cells,
+    core active text = {\QuickAction,
+    You ignore the next overheating check you make this challenge. When you would overheat, clear your heat from your gauge as normal, but ignore the check (you don’t take stress either). You vent an enormous cloud of burning matter from your mech, creating a burst 3 area centered on your mech. Inside the area, all targets (allied and enemy) count as invisible to everyone except you, and all mechs other than you that enter the area for the first time on their turn or start their turn there take 2 Burn and 2 heat.
+    On the following round, the benefit from the area reduces to heavy cover (which you ignore). On the round after that, it reduces to light cover. On the round after that round, the zone disperses.
+    }
+]
 
-\textbf{Emergency Vent:} When the GENGHIS loses a point of structure, it immediately cools and clears its heat gauge.},
-sp = 5,
-mount one = flex mount,
-mount two = heavy mount,
-core system name = TBK Sustain Suite,
-core system text = {In order to better manage the tremendous power demands of the GENGHIS platform, HA’s Think Tank developed a suite of power-management protocols to rapidly accelerate heat dispersion. After extensive field testing, pilots discovered that the TBK Sustain Suite can be tuned to be both a heat sink and a area-denial weapon.},
-core active name = Expose Power Cells,
-core active text = {\QuickAction,
-You ignore the next overheating check you make this challenge. When you would overheat, clear your heat from your gauge as normal, but ignore the check (you don’t take stress either). You vent an enormous cloud of burning matter from your mech, creating a burst 3 area centered on your mech. Inside the area, all targets (allied and enemy) count as invisible to everyone except you, and all mechs other than you that enter the area for the first time on their turn or start their turn there take 2 Burn and 2 heat.
-On the following round, the benefit from the area reduces to heavy cover (which you ignore). On the round after that, it reduces to light cover. On the round after that round, the zone disperses.}]
-
-\gearBox
-[
-    name = {Flamethrower},
+\gearBox[name = {Flamethrower},
     fluff = {The HA Krakatoa was developed specifically for the Hercynian crisis, as chassis-size flamethrowers had been deemed unnecessary, and more to the point, banned by anti-terror conventions. With the combination of thick arboreal environment, swarm tactics of the Egregorians, and ineffectual performance of slug ammunition, the need for a recession on the ban was apparent. The Krakatoa was quickly developed and affiliate patterns disseminated. Adopted by Union MEF units, the Krakatoa saw heavy use in the deep world-jungle of Hercynia and towering hives of the Egregorians thanks to its stability, intensity, and stopping power — a necessary feature competitor makes lacked. Egregorian drones and warriors, commanded by their overminds, would not stop advancing until they were physically incapable of doing so — the force at which the Krakatoa expelled flame and fuel was sufficient to knock back or otherwise incapacitate charging warriors on the periphery of the flame cone. Reworked after the cessation of the Hercynian crisis, the Krakatoa is now a popular tool for creating area-of-denial firebreaks. Its legality is currently under review by the Galactic Treaties Board.},
     template= {
         \Heavy \CQB\\
