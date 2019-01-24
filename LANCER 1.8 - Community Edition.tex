@@ -27,9 +27,11 @@
 \import{./templates/}{mech-template.tex}
 \import{./templates/}{gear-template.tex}
 \import{./templates/}{npc-template.tex}
+\import{./templates/}{background-template.tex}
+\import{./templates/}{talent-template.tex}
 
 % --- always last
-\usepackage[hidelinks,bookmarks=true]{hyperref} 
+\usepackage[hidelinks,bookmarks=true]{hyperref}
 % hypersetup, below
 
 % --------------------------
@@ -39,7 +41,7 @@
 
 \setlrmarginsandblock{25.4mm}{22.2mm}{*}
 \setulmarginsandblock{1in}{1in}{1}
-\checkandfixthelayout 
+\checkandfixthelayout
 
 \setlength{\oddsidemargin}{0pt}
 \setlength{\evensidemargin}{0pt}
@@ -50,8 +52,8 @@
 
 \setmainfont{Arial}
 
-\hypersetup{colorlinks=false     
-	%linkcolor=DarkBlue, % color of internal links (change box color with linkbordercolor)
+\hypersetup{colorlinks=false
+  %linkcolor=DarkBlue, % color of internal links (change box color with linkbordercolor)
   %  urlcolor=blue       % color of external links
 }
 
@@ -172,7 +174,7 @@
 \date{} % quick hack to suppress date showing on wrong page
 Document generated: \today \\
 %Document version: \texttt{\gitshort} on branch \texttt{\branch}
-%Document version: \gitAbbrevHash \ on branch \gitBranch, committed \gitAuthorDate 
+%Document version: \gitAbbrevHash \ on branch \gitBranch, committed \gitAuthorDate
 
 \vspace{1cm}
 1.8 Beta - CE pre-release\\
@@ -191,7 +193,7 @@ Please do not reproduce without permission
 % TODO: this must be automatable.
 \addtocounter{page}{12}
 
-\import{source/}{intro} 
+\import{source/}{intro}
 \import{source/}{cavalry}
 \import{source/}{basicRules.tex}
 \import{source/}{licenseToKill.tex}

@@ -1,0 +1,14 @@
+% Background template
+\usepackage{pgfkeys}
+
+\providecommand{\fluff}[1]{{\itshape #1}}
+
+\newcommand{\rank}[2]{\item \textbf{#2 (Rank #1):}}
+\newenvironment{talent}[1]
+{
+  \fluff{#1}
+  \begin{itemize}
+}
+{
+  \end{itemize}
+}
