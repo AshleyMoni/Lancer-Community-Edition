@@ -1,8 +1,6 @@
-\subsection{HA Sherman}
-
 \begin{mech}{HA}{Sherman}
 
-\fluff{The SHERMAN is Harrison Armory‘s line-model chassis: any station, nation, world, stellar, or interstellar state that holds a fleet-tier contract with Harrison Armory fields a backbone force of localized SHERMAN cores. The SHERMAN platform is tuned to provide a rugged, versatile power plant for HA‘s fleet-line energy weaponry and a heat-dispersal system to ensure that the tremendous power requirements do not overwhelm the chassis‘ tolerance. Next to GMS‘s EVEREST, the SHERMAN is the second most-common mech chassis in the core systems, so much so that GMS has recently made a push to include more ablative and wave-scatter defenses into its stock +1 models to deal with hostile actors fielding the SHERMAN.}
+\fluff{The SHERMAN is Harrison Armory's line-model chassis: any station, nation, world, stellar, or interstellar state that holds a fleet-tier contract with Harrison Armory fields a backbone force of localized SHERMAN cores. The SHERMAN platform is tuned to provide a rugged, versatile power plant for HA's fleet-line energy weaponry and a heat-dispersal system to ensure that the tremendous power requirements do not overwhelm the chassis' tolerance. Next to GMS's EVEREST, the SHERMAN is the second most-common mech chassis in the core systems, so much so that GMS has recently made a push to include more ablative and wave-scatter defenses into its stock +1 models to deal with hostile actors fielding the SHERMAN.}
 
 \begin{license}
 \item Reactor Stabilizer, Laser Rifle
@@ -41,12 +39,12 @@ Line 15\\
 core active name = COREBURN Beam,
 core active text = {\FullAction
 
-As a full action, your mech begins to charge this weapon but cannot move or take any other action this turn. Your mech stops charging this weapon if it becomes stunned, shut down, jammed, knocked prone, or any effect that would cause it to be unable to attack (if it is unable to fire, don’t spend the core power). The turn after you start charging this weapon, you may fire it by taking Full Action again. Choose a line 30 area originating from your mech. All mechs caught in the area must pass an agility check or take 12d6 energy damage, and half on a successful check. Any obstacles or deployables in the way are hit automatically and the beam easily penetrates through cover. This beam counts as an attack for purposes of systems, talents, etc.},
+As a full action, your mech begins to charge this weapon but cannot move or take any other action this turn. Your mech stops charging this weapon if it becomes stunned, shut down, jammed, knocked prone, or any effect that would cause it to be unable to attack (if it is unable to fire, don't spend the core power). The turn after you start charging this weapon, you may fire it by taking Full Action again. Choose a line 30 area originating from your mech. All mechs caught in the area must pass an agility check or take 12d6 energy damage, and half on a successful check. Any obstacles or deployables in the way are hit automatically and the beam easily penetrates through cover. This beam counts as an attack for purposes of systems, talents, etc.},
 ]
 
 \gearBox
 [name = Laser Rifle {(SOL-Pattern)},
-fluff = {The laser rifle is a near-ubiquitous weapon throughout the galaxy, the energy-based cousin to GMS‘s Type-I AR. To call it a rifle, though, is shorthand: a laser rifle is a projector that utilizes a series of apertures and lenses to amplify and focus light into tight beam, visible in the right circumstances, that paints a target long enough to heat the area of “impact“ into plasma. The HA SOL-pattern laser rifle is capable of a 3.5PW maximum output, pulsed, but can project a beam at lower power levels; additionally, while some laser rifles can double as communication/data transfer devices, the Armory‘s SOL is strictly tuned for combat, and has no such communication capability. The SOL is a solid state and entirely self-contained, but can be patched into a chassis‘ reactor core for operation and to re-charge spent weaponry. Energy weapons, while having downsides of their own, are commonly used in micro-and-zero-gravity environments due to having no impulse or kinetic user feedback.},
+fluff = {The laser rifle is a near-ubiquitous weapon throughout the galaxy, the energy-based cousin to GMSs Type-I AR. To call it a rifle, though, is shorthand: a laser rifle is a projector that utilizes a series of apertures and lenses to amplify and focus light into tight beam, visible in the right circumstances, that paints a target long enough to heat the area of ``impact`` into plasma. The HA SOL-pattern laser rifle is capable of a 3.5PW maximum output, pulsed, but can project a beam at lower power levels; additionally, while some laser rifles can double as communication/data transfer devices, the Armory's SOL is strictly tuned for combat, and has no such communication capability. The SOL is a solid state and entirely self-contained, but can be patched into a chassis' reactor core for operation and to re-charge spent weaponry. Energy weapons, while having downsides of their own, are commonly used in micro-and-zero-gravity environments due to having no impulse or kinetic user feedback.},
 template={\Main \Rifle\\
 \Range{10}\\
 \HeatSelf{1}\\
@@ -56,7 +54,7 @@ template={\Main \Rifle\\
 [name = {Reactor Stabilizer},
 fluff = {A necessary component of most energy-based mechs, reactor stabilizers add another layer of failsafe protocols to vent heat, manage power flow, and shunt excessive output into weapons and systems in need.},
 template = {3 SP, \Unique},
-rules = {When you gain a point of reactor stress, you can re-roll your overheating check (but must keep the second result, even if it’s worse).}]
+rules = {When you gain a point of reactor stress, you can re-roll your overheating check (but must keep the second result, even if it's worse).}]
 
 \gearBox
 [name = {Heavy Laser},
@@ -68,26 +66,26 @@ template ={\Heavy \Cannon\\
 
 \gearBox
 [name = {Redundant Systems upgrade},
-fluff = {A common right-of-distribution modification by pilots in forward operating bases, building further redundancy into a chassis‘s systems guarantees a measure of reliability beyond stock design standards.},
+fluff = {A common right-of-distribution modification by pilots in forward operating bases, building further redundancy into a chassis's systems guarantees a measure of reliability beyond stock design standards.},
 template = {2 SP, \Unique, \Limited{1}},
 rules = {You can activate this module to make a Stabilize action as a \QuickAction.}]
 
 \gearBox
 [name = {ASURA-class NHP},
-fluff = {ASURA was born from the Armory‘s Think Tank thought-war games as a response to repeated failures during a forlorn hope scenario test; ASURA manifested in simulated mechs‘ systems as a recode of HORUS‘s PUPPETMASTER virus, hijacking friendly cores and forcing them into action far beyond human capacity -- action at speed and intensity that the registered g-force caused the sim-pilots to die, suffocated and crushed by the sudden amplified mass of their own bodies.\\
-While such results were initially deemed a failure by Think Tank NHPs and engineers, further study on ASURA was commissioned. Personality and parasentience code was injected into the initial anomalous PUPPETMASTER, first contact handled by Think Tank NHPs, and societal acclimation and conditioning was fast tracked, giving Armory engineers the first iteration of ASURA after roughly a decade of study, re-coding, and reeducation. ASURA, as it exists now, is a scaled-back version of that initial manifestation: while retaining some of its initial alacratic impulse, ASURA now recognizes the need to keep its pilot alive, and will operate within parameters set by its pilot‘s medical and psychological tolerances.},
+fluff = {ASURA was born from the Armory's Think Tank thought-war games as a response to repeated failures during a forlorn hope scenario test; ASURA manifested in simulated mechs' systems as a recode of HORUS's PUPPETMASTER virus, hijacking friendly cores and forcing them into action far beyond human capacity -- action at speed and intensity that the registered g-force caused the sim-pilots to die, suffocated and crushed by the sudden amplified mass of their own bodies.\\
+While such results were initially deemed a failure by Think Tank NHPs and engineers, further study on ASURA was commissioned. Personality and parasentience code was injected into the initial anomalous PUPPETMASTER, first contact handled by Think Tank NHPs, and societal acclimation and conditioning was fast tracked, giving Armory engineers the first iteration of ASURA after roughly a decade of study, re-coding, and reeducation. ASURA, as it exists now, is a scaled-back version of that initial manifestation: while retaining some of its initial alacratic impulse, ASURA now recognizes the need to keep its pilot alive, and will operate within parameters set by its pilot's medical and psychological tolerances.},
 template = {3 SP, \Unique\\
 \AI},
 rules = {Your mech gains the AI property and the ASURA protocol:\\
 ASURA protocol\\
 \Protocol\\
 \Limited{1}\\
-This turn only, gain an extra two quick actions or one full action. These extra actions must still obey normal rules about duplicating actions (you can’t use it to Boost if you’ve already Boosted this turn, for example\\
+This turn only, gain an extra two quick actions or one full action. These extra actions must still obey normal rules about duplicating actions (you can't use it to Boost if you've already Boosted this turn, for example\\
 This protocol can only be activated once per scene.}]
 
 \gearBox
 [name = {Tachyon Lance},
-fluff = {The tachyon lance is the weaponized result of early Harrison Armory experiments into faster-than-light travel. Rendered obsolete by developments in blinkspace travel and the difficulty of ensuring corporeal passenger survival, HA‘s tachyon accelerators were mothballed until Think Tank engineers realized their potential application as weapons. A tachyon accelerator projects tachyon particles -- essentially a subatomic localized object -- faster than light towards its target. These particles are impossible to see through optical/visible means: as they travel faster than light, they cannot be seen or avoided intentionally. Though the size of the particle is tiny, the sheer speed and energy of travel is titanic, and the damage a tachyon lance imparts on its target -- should it connect -- is unparalleled.},
+fluff = {The tachyon lance is the weaponized result of early Harrison Armory experiments into faster-than-light travel. Rendered obsolete by developments in blinkspace travel and the difficulty of ensuring corporeal passenger survival, HA's tachyon accelerators were mothballed until Think Tank engineers realized their potential application as weapons. A tachyon accelerator projects tachyon particles -- essentially a subatomic localized object -- faster than light towards its target. These particles are impossible to see through optical/visible means: as they travel faster than light, they cannot be seen or avoided intentionally. Though the size of the particle is tiny, the sheer speed and energy of travel is titanic, and the damage a tachyon lance imparts on its target -- should it connect -- is unparalleled.},
 template = {\Superheavy \Cannon\\
 \Ordnance, \HeatSelf{4}\\
 \Range{20}, \Burn{8}\\

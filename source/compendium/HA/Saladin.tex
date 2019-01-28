@@ -1,8 +1,6 @@
-\subsection{HA Saladin}
-
 \begin{mech}{HA}{Saladin}
 
-\fluff{The Saladin chassis provides a platform for pilots to mount squad-support tier shielding. Developed in response to anti-slaver engagements in the Tian Shan ring, Harrison Armory’s SALADIN chassis proved an invaluable member of Present/Persistent Danger Escort/Evac teams sent in to evacuate emancipator teams \& their charges. Records from these engagements indicate that the SALADIN’s massive bulk alone was a comfort and morale boost to emancipator squads, who often referred to the chassis pattern as “Big Sal”; SALADIN pilots from that era report null balances on bar tabs when present in emancipated systems.}
+\fluff{The Saladin chassis provides a platform for pilots to mount squad-support tier shielding. Developed in response to anti-slaver engagements in the Tian Shan ring, Harrison Armory's SALADIN chassis proved an invaluable member of Present/Persistent Danger Escort/Evac teams sent in to evacuate emancipator teams \& their charges. Records from these engagements indicate that the SALADIN's massive bulk alone was a comfort and morale boost to emancipator squads, who often referred to the chassis pattern as ``Big Sal''; SALADIN pilots from that era report null balances on bar tabs when present in emancipated systems.}
 
 \begin{license}
 \item Support Shield, Impulse Missiles
@@ -27,7 +25,7 @@ traits = {\textbf{Reinforced frame:} The SALADIN is immune to the shredded condi
 sp = 8,
 mount one = flex mount,
 core system name = Tachyon Loop,
-core system text = {Developed by HA’s Think Tank as a joint venture with IPS-Northstar’s stellar engineering unit, a Tachyon Loop manipulates a tachyon lance and restrains them to a closed-loop system, accelerating tachyon particles at faster-than-light speeds around a central buckler. The shield is carried and mounted on a chassis to intercede directional incoming fire: as the tachyon particles are traveling faster than light, they are invisible to the naked eye, giving the shield the appearance of a large spoked wheel.},
+core system text = {Developed by HA's Think Tank as a joint venture with IPS-Northstar's stellar engineering unit, a Tachyon Loop manipulates a tachyon lance and restrains them to a closed-loop system, accelerating tachyon particles at faster-than-light speeds around a central buckler. The shield is carried and mounted on a chassis to intercede directional incoming fire: as the tachyon particles are traveling faster than light, they are invisible to the naked eye, giving the shield the appearance of a large spoked wheel.},
 core active name = Empower Shield,
 core active text = {\QuickAction,
 
@@ -35,7 +33,7 @@ You can empower this shield, projecting it over an ally in your sensor range. As
 
 \gearBox
 [name = {Support Shield},
-fluff = {The HA Support Shield, ENCLAVE-pattern, creates a localized one-way blink field, folding a thin dome of spacetime around its user to protect occupants from incoming projectiles. Units covered by the field can fire out, but probabilistic fluctuations cause incoming projectiles to “lag”, skipping them away from their intended target and into a randomized trajectory.},
+fluff = {The HA Support Shield, ENCLAVE-pattern, creates a localized one-way blink field, folding a thin dome of spacetime around its user to protect occupants from incoming projectiles. Units covered by the field can fire out, but probabilistic fluctuations cause incoming projectiles to ``lag'', skipping them away from their intended target and into a randomized trajectory.},
 template = {2 SP, \Unique\\
 \Shield, \QuickAction, \HeatSelf{2}},
 rules = {Activating this system generates a \Burst{3} area centered on you until the end of your next turn. All ranged or melee attacks made against you and any allied targets inside the shield that originate from outside the shield are made with +1 Difficulty, but your mech is immobilized for the same duration.}]
@@ -46,18 +44,18 @@ template = {\Main \Launcher\\
 1 SP\\
 \Range{10}, \Arcing
 1d3+1 \energy damage},
-rules = {The attack roll for this weapon cannot be any worse than a regular roll (it can’t suffer any difficulty on the final roll)}]
+rules = {The attack roll for this weapon cannot be any worse than a regular roll (it can't suffer any difficulty on the final roll)}]
 
 \gearBox
 [name = {Paracausal weapon mod},
-fluff = {Paracausal weapons are, to say it plain, difficult to describe and visualize. The first incident was recorded when paracausal ammunition was pushed to frontline soldiers during the Tian Shen civil engagements. It arrived in sealed magazines with directions to be loaded and fired as normal. There was to be no inspection of the magazines’ contents, as this would “damage the payload” — frontline reports indicate that this ammunition impacts as normal on intended targets, though it seems to pierce armor and shielding at near-100\& efficacy. Samples of paracausal ammunition have been flagged by Union for retrieval, and due to its development Harrison Armory is currently undergoing investigation by the Bureau; paracausal ammunition is still in use in the field, however, as shipments continue to leak to interested parties. HORUS is suspected, and a concurrent investigation is underway.},
+fluff = {Paracausal weapons are, to say it plain, difficult to describe and visualize. The first incident was recorded when paracausal ammunition was pushed to frontline soldiers during the Tian Shen civil engagements. It arrived in sealed magazines with directions to be loaded and fired as normal. There was to be no inspection of the magazines' contents, as this would ``damage the payload'' — frontline reports indicate that this ammunition impacts as normal on intended targets, though it seems to pierce armor and shielding at near-100\& efficacy. Samples of paracausal ammunition have been flagged by Union for retrieval, and due to its development Harrison Armory is currently undergoing investigation by the Bureau; paracausal ammunition is still in use in the field, however, as shipments continue to leak to interested parties. HORUS is suspected, and a concurrent investigation is underway.},
 template = {4 SP \\
 \Mod},
 rules={Choose one weapon- damage from this weapon cannot be reduced in any way, by armor, resistance, or any other kind of damage reduction.}]
 
 \gearBox
 [name = {Projected Shield},
-fluff = {The Armory’s mainstay squad-support shielding system. A projected shield takes the standard shield and projects it to a nearby allied mech, hardsuit, or infantry squad ensuring the same coverage as a personal shield through a higher intensity series of amplifiers.},
+fluff = {The Armory's mainstay squad-support shielding system. A projected shield takes the standard shield and projects it to a nearby allied mech, hardsuit, or infantry squad ensuring the same coverage as a personal shield through a higher intensity series of amplifiers.},
 template = {1 SP, \Unique\\
 \Shield, \Protocol},
 rules = {Activate or deactivate this shield at the start of your turn. Choose an allied mech. Until the end of your next turn, as long as that mech is in your sensor range, all attacks against that mech are made at +1 Difficulty, but deal 1 heat to you on a hit.}]
@@ -71,7 +69,7 @@ rules = {Activating this system generates a line 6 section of size 1 hardlight i
 
 \gearBox
 [name = {VISHNU-Class NHP},
-fluff = {Developed to be a metropolitan administrative NHP on Ras Shamra, the VISHNU NHP strain does not, at first, seem like a viable candidate for military application. However, after being flagged by Think Tank for review following numerous anomalous traffic incidents, Armory ontologisticians and engineers were able to discover and emphasize protocols endemic to Vishnu Prime that could be exploited for tactical advantages. Through numerous iterations and lifecycles, VISHNU Prime displayed a sharp ability to adapt to kinetic situations. A proclivity towards crisis management and multiple-k actor tracking led to VISHNU’s pairing with the Armory’s ENCLAVE shield system; by networking a series of jet-assist mobility drones carrying the ENCLAVE system, monitored and controlled by a VISHNU clone, Think Tank was able to create an unparalleled personal shielding system: the DHARMA WALL.},
+fluff = {Developed to be a metropolitan administrative NHP on Ras Shamra, the VISHNU NHP strain does not, at first, seem like a viable candidate for military application. However, after being flagged by Think Tank for review following numerous anomalous traffic incidents, Armory ontologisticians and engineers were able to discover and emphasize protocols endemic to Vishnu Prime that could be exploited for tactical advantages. Through numerous iterations and lifecycles, VISHNU Prime displayed a sharp ability to adapt to kinetic situations. A proclivity towards crisis management and multiple-k actor tracking led to VISHNU's pairing with the Armory's ENCLAVE shield system; by networking a series of jet-assist mobility drones carrying the ENCLAVE system, monitored and controlled by a VISHNU clone, Think Tank was able to create an unparalleled personal shielding system: the DHARMA WALL.},
 template = {3 SP, \Unique\\
 \AI},
 rules = {Your mech gains the AI property and the following protocol:\\

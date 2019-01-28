@@ -1,4 +1,5 @@
 \documentclass[11pt, letterpaper, openany]{memoir}
+\interfootnotelinepenalty=10000
 
 % --------------------------
 % Packages
@@ -6,6 +7,8 @@
 \usepackage{varwidth}
 \usepackage{import}
 \usepackage[svgnames]{xcolor} % https://www.w3.org/TR/SVG11/types.html#ColorKeywords
+\usepackage{lancer}
+
 \usepackage{parskip}
 \usepackage{fontspec}
 \usepackage{titlesec}
@@ -18,6 +21,7 @@
 \usepackage{xstring}
 \usepackage{catchfile}
 \usepackage{titlesec}
+\usepackage{enumitem}
 %\usepackage{gitinfo2}
 
 % --------------------------
@@ -47,7 +51,14 @@
 \interfootnotelinepenalty=10000
 \raggedright
 
-\setmainfont{Arial}
+\setmainfont[Ligatures=TeX]{Arial}
+\fontdimen2\font=3pt
+
+\renewcommand{\baselinestretch}{1.1}
+
+%\list[itemize,1]{=10pt}
+\setlist{nolistsep}
+\setlist{itemsep=1pt, topsep=5pt}
 
 \hypersetup{colorlinks=false
   %linkcolor=DarkBlue, % color of internal links (change box color with linkbordercolor)
@@ -78,13 +89,6 @@
 % --------------------------
 \providecommand{\fluff}[1]{{\itshape #1}}
 \providecommand{\punch}[1]{\textbf{\Large #1}}
-
-\newenvironment{loreQuote}
-{\begin{center}
-\begin{varwidth}{\textwidth}
-  \small \itshape}
-{\end{varwidth}
-\end{center}}
 
 \titleformat
 {\chapter} % command
