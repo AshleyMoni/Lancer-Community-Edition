@@ -1,4 +1,5 @@
 \usepackage{enumerate}
+\usepackage{enumitem}
 \usepackage{pgfkeys}
 \usepackage{xcolor,colortbl,longtable,float,supertabular,stringstrings,enumitem}
 \usepackage[export]{adjustbox} %allows for control of max image dimensions.
@@ -59,8 +60,8 @@
 
 \newenvironment{license}
 {
-License: \vspace*{-5mm}
-\begin{enumerate}[label=\Roman*., itemsep=0mm, align=right]
+License: \\
+\begin{enumerate}[label=\Roman*.]
 }
 {
 \end{enumerate}
