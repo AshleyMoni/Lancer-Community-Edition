@@ -1,16 +1,60 @@
 \usepackage{enumerate}
 \usepackage{enumitem}
 \usepackage{pgfkeys}
+\usepackage{xcolor,colortbl,longtable,float,supertabular,stringstrings,enumitem}
+\usepackage[export]{adjustbox} %allows for control of max image dimensions.
 
 \providecommand{\fluff}[1]{{\itshape #1}}
 
 \providecommand\corpName{}
 \providecommand\mechName{}
+
+\newcommand{\nosubsection}[1]{%
+  \refstepcounter{subsection}%
+  \addcontentsline{toc}{subsection}{#1}%{\protect\numberline{\thesubsection}#1}%
+  \markright{#1}}
+
+
 \newenvironment{mech}[2]
 {
-  \renewcommand{\corpName}{#1}
+\clearpage
+\renewcommand{\corpName}{#1}
   \renewcommand{\mechName}{#2}
-  \corpName \space \mechName \\
+  % \corpName \space \mechName \\
+
+
+
+  % remove spaces and punutation from argument, to translate mech name to filename
+  % goddamn this is ugly though. http://mirror.las.iastate.edu/tex-archive/macros/latex/contrib/stringstrings/stringstrings.pdf for details
+  \Treatments{1}{1}{0}{0}{0}{0}
+  \substring[q]{#2}{1}{20}
+
+  \IfFileExists{images/\thestring.png}{
+    % If we have an image, skip the text title because the image already contains it, then load the image
+    % The images are all large enough, with the floating H option, to force a newpage
+    %\subsection{#1 \space #2}
+
+    \clearpage % somehow we still need this.
+    \phantomsection
+    \nosubsection{#1 \space #2}
+
+    \begin{figure}[H]
+      \begin{center}
+        \makeatletter
+          % 0.95 stops the blackbeard being on the wrong page
+          \includegraphics[max height=0.95\textheight, max width=0.95\textwidth]{\thestring}
+        \makeatother
+        \end{center}
+    \end{figure}
+
+  }{
+    % If we can't find an image, clear the page and generate a subsection title
+    \clearpage
+    \subsection{#1 \space #2}
+
+  }
+
+
 }
 {}
 
@@ -44,10 +88,10 @@ License: \\
     mount one = -,
     mount two = -,
     mount three = -,
-    core system name = undefined,
-    core system text = undefined,
-    core active name = undefined,
-    core active text = undefined,
+    core system name = \empty,
+    core system text = \empty,
+    core active name = \empty,
+    core active text = \empty,
   },
   % we define some keys
   hp/.store in = \frameHP,
@@ -71,26 +115,81 @@ License: \\
   core active text/.store in = \frameCoreActiveText,
 }
 
+%\newcommand\frameBox[1][] {
+%  \pgfkeys{/frame, default, #1}
+%  \mechName \\
+%  HP: \frameHP \\
+%  Evasion: \frameEvasion \\
+%  Speed: \frameSpeed \\
+%  Heat Cap: \frameHeatCap \\
+%  Sensors: \frameSensors \\
+%  Armor: \frameArmor \\
+%  E-Defense: \frameEDefense \\
+%  Size: \frameSize \\
+%  Repair Cap: \frameRepairCap \\
+%  Tech Attack: \frameTechAttack \\
+%  System Points: \frameSP \\
+%  Traits: \frameTraits \\
+%  Mount 1: \frameMountOne \\
+%  Mount 2: \frameMountTwo \\
+%  Mount 3: \frameMountThree \\
+%  \textbf{\frameCoreSystemName} \\
+%  \frameCoreSystemText \\
+%  \textbf{\frameCoreActiveName} \\
+%  \frameCoreActiveText \\
+%}
+
+\definecolor{Gray}{gray}{0.85}
 \newcommand\frameBox[1][] {
-  \pgfkeys{/frame, default, #1}
-  \mechName \\
-  HP: \frameHP \\
-  Evasion: \frameEvasion \\
-  Speed: \frameSpeed \\
-  Heat Cap: \frameHeatCap \\
-  Sensors: \frameSensors \\
-  Armor: \frameArmor \\
-  E-Defense: \frameEDefense \\
-  Size: \frameSize \\
-  Repair Cap: \frameRepairCap \\
-  Tech Attack: \frameTechAttack \\
-  System Points: \frameSP \\
-  Traits: \frameTraits \\
-  Mount 1: \frameMountOne \\
-  Mount 2: \frameMountTwo \\
-  Mount 3: \frameMountThree \\
-  \textbf{\frameCoreSystemName} \\
-  \frameCoreSystemText \\
-  \textbf{\frameCoreActiveName} \\
-  \frameCoreActiveText \\
+\pgfkeys{/frame, default, #1}
+
+% DO NOT use \begin{center} or \begin{table}!!!
+{
+      \centering
+      \tablefirsthead{\hline }
+
+      \tablehead{\hline}
+
+      \tabletail{\hline}
+
+      \tablelasttail{\hline}
+
+      \begin{supertabular}{| p{25mm} | p{25mm} | p{25mm} | p{25mm} | p{25mm} |}
+        \rowcolor{Gray}
+        \multicolumn{5}{|c|}{\textbf{\mechName}} \rule{0pt}{6mm}\\
+        \hline
+
+        \textbf{HP:} \frameHP & \textbf{Evasion:} \frameEvasion & \textbf{Speed:} \frameSpeed & \textbf{Heat Cap:} \frameHeatCap & \textbf{Sensors:} \frameSensors \\
+        \hline
+        \textbf{Armor:} \frameArmor & \textbf{E-Defense:} \frameEDefense & \textbf{Size:} \frameSize & \textbf{Repair Cap:} \frameRepairCap & \textbf{Tech Attack:} \frameTechAttack \\
+        \hline
+        \rowcolor{Gray}
+        \multicolumn{5}{|c|}{\textbf{TRAITS:}} \rule{0pt}{6mm}\\
+        \hline
+        \multicolumn{5}{|p{150mm}|}{\frameTraits} \\
+        \hline
+        \rowcolor{Gray}
+        \multicolumn{5}{|c|}{\textbf{SYSTEM POINTS:} \frameSP} \rule{0pt}{6mm}\\
+        \hline
+        \rowcolor{Gray}
+        \multicolumn{5}{|c|}{\textbf{MOUNTS:}} \rule{0pt}{6mm}\\
+        \hline
+        \multicolumn{2}{|p{50mm}|}{\frameMountOne} & \multicolumn{2}{|p{50mm}|}{\frameMountTwo} & \multicolumn{1}{|l|}{\frameMountThree} \\
+      % \end{supertabular}
+      % \vspace*{3mm}
+      % \begin{supertabular}{| p{25mm} | p{25mm} | p{25mm} | p{25mm} | p{25mm} |}
+        \hline
+        \rowcolor{Gray}
+        \multicolumn{5}{|c|}{\textbf{CORE system}} \rule{0pt}{6mm}\\
+        \hline
+        \multicolumn{5}{|c|}{\textbf{\frameCoreSystemName} } \\
+        \multicolumn{5}{|p{150mm}|}{
+          % These empty mathmode blocks ensure latex allocates some vspace when the line is otherwise empty.
+          \fluff{\frameCoreSystemText} $ $} \\%\newline
+        \multicolumn{5}{|p{150mm}|}{\textbf{\frameCoreActiveName} $ $} \\
+        \multicolumn{5}{|p{150mm}|}{\frameCoreActiveText $ $} \\ \end{supertabular}
+
+\vspace*{1cm}
+\par
+}
 }
