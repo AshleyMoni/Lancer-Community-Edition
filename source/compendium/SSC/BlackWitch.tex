@@ -36,18 +36,17 @@ core system text = {A magnetic field generator takes the same technology as othe
 core active name = Mag Field,
 core active text = {As a quick action, you may activate the mag field to create a Blast 4 area in any area with at least one square adjacent to you. Inside, ranged weapon attacks that deal kinetic or explosive damage cannot penetrate into or out of the field and will stop at the edge, doing no damage (keep track of them). The field is difficult terrain for all mechs and vehicles made at least partly of metal. Actors at least partly made of metal that start their turn in the Mag Field or enter it for the first time on their turns must make a successful Engineering check with 1 difficulty or be pulled to the center as far as possible and immobilized. They can repeat this check at the start of their subsequent turns while trapped this way and can move normally on a success, otherwise they remain trapped. The field lasts until the end of your next turn. At the end of your next turn, any kinetic or explosive weapons fired into this field will resume trajectory towards the center of this zone. The GM performs a single attack roll vs each target still inside the zone with +1 targeting per attack fired into this zone (cumulative, up to a max of +6). Successful hits deal 1d6 Kinetic damage per attack fired into this zone (cumulative, to a maximum of 6d6). Then, the zone deactivates.}]
 
+\gearBox
+[name = {Mag Cannon},
 
-Mag Cannon
+fluff = {The SSC Magnetic Cannon is a first in Smith-Shimano's ENERGY line: an aperture-focused magnetic projection beam that disrupts and damages hardware using intense pulses of magnetic force. Cores caught in the beam of a mag cannon suffer additional damage to their software, as even hardened components come under massive systemic stress.},
 
-The SSC Magnetic Cannon is a first in Smith-Shimano's ENERGY line: an aperture-focused magnetic projection beam that disrupts and damages hardware using intense pulses of magnetic force. Cores caught in the beam of a mag cannon suffer additional damage to their software, as even hardened components come under massive systemic stress.
+template = {\Main \Cannon \linebreak
+\HeatSelf{1} \linebreak
+\Line{8} \linebreak
+1d3 \energy damage + \HeatTarget{1}},
 
-Main Cannon
-
-1 heat (self)
-Line 8
-1d3 energy damage +1 heat
-
-All targets caught in the area of this weapon must pass a systems check or become impaired until the end of their next turn.
+rules = {All targets caught in the area of this weapon must pass a systems check or become impaired until the end of their next turn.}]
 
 
 Ferrous Lash
