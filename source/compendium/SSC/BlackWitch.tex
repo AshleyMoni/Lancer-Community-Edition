@@ -64,7 +64,7 @@ rules = {You fire an ICEOUT drone at a point within range 10 of you, where it ho
 fluff={SSC's own take on flash-printing is advanced enough to embed magtech burnout cells into raw prefab clay. SSC non-mag pilots often disparage Black Witch pilots for ``throwing plates'' at the enemy, but the tactical advantage they provide cannot be denied.},
 template = {2 SP \newline
 \QuickAction},
-rules = {You flash-print a heavy metal plate that takes up a 2x2 free space in range 5 of you. It is flat and doesn't obstruct movement. You can set the system to one of two settings when you create it:
+rules = {You flash-print a heavy metal plate that takes up a 2x2 free space in \Range{5} of you. It is flat and doesn't obstruct movement. You can set the system to one of two settings when you create it:
 
 Repulse: Any hostile target that enters the space must pass a hull check or be pushed in a direction of your choice 3 spaces. If this causes them to collide with an obstruction (terrain, a mech, etc) it is additionally knocked prone. An allied target that enters the space can fly 3 in any direction as a free action.
 
@@ -74,15 +74,14 @@ The deployer can be attacked - it has evasion 5, 20 hp, and 2 armor, and it last
 
 \gearBox
 [name = {Black Ice module},
+fluff = {},
 template = {3 SP, \Unique},
 rules = {Hostile tech actions or system attacks against your mech or any adjacent ally are made at +1 Difficulty. Successive attacks in the same combat from any target are made with an additional +1 Difficulty (cumulative). This difficulty has a maximum of +4, and resets when it would hit +5 back to +1 as its definitions roll over.}]
 
-
-Mag Shield
-SSC's magnetic shield takes the same technology as their proprietary magnetic buckler and applies it to a massive deployable system.
-
-2 SP, Unique
-Shield, quick action
-
-As a quick action, this system creates a line 4 force field 4 spaces high with at least 1 square in an adjacent space to you. Any adjacent mech can use this force field for heavy cover from attacks on the other side. It additionally gains resistance to kinetic and explosive damage from attacks on the other side of this field, but conversely, any of its targets on the other side of the forcefield gain resistance to kinetic and explosive damage from its attacks. The shield lasts until the end of the current scene, but only 1 shield can be placed at a time.
+\gearBox
+[name = {Mag Shield},
+fluff = {SSC's magnetic shield takes the same technology as their proprietary magnetic buckler and applies it to a massive deployable system.},
+template = {2 SP, \Unique \newline
+\Shield, \QuickAction},
+rules = {As a quick action, this system creates a line 4 force field 4 spaces high with at least 1 square in an adjacent space to you. Any adjacent mech can use this force field for heavy cover from attacks on the other side. It additionally gains resistance to kinetic and explosive damage from attacks on the other side of this field, but conversely, any of its targets on the other side of the forcefield gain resistance to kinetic and explosive damage from its attacks. The shield lasts until the end of the current scene, but only 1 shield can be placed at a time.}]
 \end{mech}
