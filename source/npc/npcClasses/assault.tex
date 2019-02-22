@@ -1,113 +1,98 @@
 \subsection{Assault}
-                                                ASSAULT
+\begin{npc}{Assault}
 
-Assault doctrine mechs and their pilots are the most common main battle chassis found throughout the
+\fluff{Assault doctrine mechs and their pilots are the most common main battle chassis found throughout the
 galaxy. Fitted with a localized version of a main battle rifle, sidearm, and a suite of systems to enhance
 
 movement, targeting, and defensive systems, an Assault Doctrine chassis is a straightforward, reliable,
 hardy combatant.
 
 Assault doctrine pilots are the cheapest to train and outfit: this does not make them any less of a threat
-when paired with a kit of their choice.
+when paired with a kit of their choice.}
 
-       ASSAULT
+\npcBox
+[hull = +1,
+agility = +1,
+systems = +1,
+engineering = +1,
+hp = 20,
+evasion = 8,
+e-defense = 8,
+heat cap = 8,
+armor = 1,
+speed = 4,
+sensors = 8,
+size = 1]
 
-       Mech
+\textbf{Base systems:}
 
-       Hull       Agility      Systems       Engineering
+\npcGearBox[name = {Heavy Assault Rifle},
+template = {\Main \Rifle\\
+Range 10\\
++2 vs evasion/tier with +1 Accuracy\\
+7/9/11 \kinetic damage}]
 
-       +1         +1           +1            +1
+\npcGearBox[name = {Combat Knife},
+template = {\Auxiliary \Melee\\
+Threat 1\\
++1 vs evasion/tier\\
+5/7/8 \kinetic damage}]
 
-       HP         Evasion      E-defense     Heat Cap.
+\textbf{Optional systems:}
 
-       20         8            8             8
+\npcGearBox[name = {Underslung Grenade Launcher},
+template = {\Auxiliary \Launcher\\
+Loading, Arcing\\
+Range 8, Blast 2\\
+4/6/8 \explosive damage}]
 
-       Armor      Speed        Sensors       Size
-
-       1          4            8             1
-
-Base systems:
-
-Heavy Assault Rifle
-Main Rifle
-
-Range 10
-
-+2 vs evasion/tier with +1 Accuracy
-
-7/9/11 kinetic damage
-
-
-Combat Knife
-Auxiliary Melee
-
-Threat 1
-
-+1 vs evasion/tier
-
-5/7/8 kinetic damage
-
-
-
-
-
-Optional systems:
-
-Underslung Grenade Launcher
-Auxiliary Launcher
-
-Loading, Arcing
-
-Range 8, Blast 2
-
-4/6/8 explosive damage
-
-
-Micro-missile Barrage
-
-Quick action, Recharge (6+)
-
-This mech makes a line 8 ranged attack with +1 vs evasion/tier for 6/9/12 explosive damage. The
+\npcGearBox[name = {Micro-missile Barrage},
+template = {Quick action, Recharge (6+)},
+rules = {This mech makes a line 8 ranged attack with +1 vs evasion/tier for 6/9/12 \explosive damage. The
 closest target hit by this missile barrage must pass a hull check or be knocked prone.
 
-At tier II onwards, this hull check is made with 1 difficulty.
+At tier II onwards, this hull check is made with 1 difficulty.}]
 
+\npcGearBox[name = {High Impact Rounds},
+template = {System},
+rules = {The Heavy Assault rifle can be fired with high caliber rounds, adding +4 \kinetic damage and the
+\AP tag, but requiring a reload after firing it this way (as if it had the loading tag)}]
 
-High Impact Rounds
+\npcGearBox[name = {Auto-targeting},
+template = {System},
+rules = {The Heavy Assault rifle ignores the effects of light and heavy cover}]
 
-System
+\npcGearBox[name = {Rank Discipline},
+template = {System},
+rules = {The Assault gains +1 Accuracy on all its attacks and checks as long as it's adjacent to at least
+one friendly mech.}]
 
-The Heavy Assault rifle can be fired with high caliber rounds, adding +4 kinetic damage and the
-AP tag, but requiring a reload after firing it this way (as if it had the loading tag)
+\textbf{Tier II:}
+\tierBox
+[hp = 23,
+evasion = 10,
+e-defense = 9,
+heat cap = 8,
+hull = +2,
+agility = +2,
+systems = +2,
+engineering = +2,
+armor = 1,
+speed = 4,
+sensors = 8]
 
+\textbf{Tier III:}
+\tierBox
+[hp = 26,
+evasion = 12,
+e-defense = 10,
+heat cap = 8,
+hull = +3,
+agility = +3,
+systems = +3,
+engineering = +3,
+armor = 1,
+speed = 4,
+sensors = 8]
 
-Auto-targeting
-System
-
-The Heavy Assault rifle ignores the effects of light and heavy cover
-
-
-Rank Discipline
-Trait
-
-The Assault gains +1 Accuracy on all its attacks and checks as long as it's adjacent to at least
-one friendly mech.
-
-
-Tier II:
-
-HP: +3
-
-
-          Evade    E-D    Heat     H    A     S     E       Armor        Spd      Sense
-
-          10       9      8        +2   +2    +2    +2      1            4        8
-
-Tier III:
-HP: +3
-
-
-          Evade    E-D    Heat     H    A     S     E       Armor        Spd      Sense
-
-          12        10    8        +3   +3    +3    +3      1            4        8
-
+\end{npc}
